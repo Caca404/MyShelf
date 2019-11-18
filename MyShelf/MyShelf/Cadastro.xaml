@@ -1,11 +1,11 @@
-﻿<Window x:Class="MyShelf.MainWindow"
+﻿<Window x:Class="MyShelf.Cadastro"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cadastro" Height="450" Width="800">
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="44" Margin="167,86,0,0" TextWrapping="Wrap" Text="Nome do user" VerticalAlignment="Top" Width="389"/>
         <TextBox HorizontalAlignment="Left" Height="44" Margin="167,150,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="389"/>
