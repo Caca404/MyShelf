@@ -55,7 +55,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Adm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Estante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Funcionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GerenciarF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GerenciarL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GerenciarU.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,12 +91,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Adm.xaml.cs">
+      <DependentUpon>Adm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Estante.xaml.cs">
+      <DependentUpon>Estante.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Funcionario.xaml.cs">
       <DependentUpon>Funcionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarF.xaml.cs">
+      <DependentUpon>GerenciarF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarL.xaml.cs">
+      <DependentUpon>GerenciarL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarU.xaml.cs">
+      <DependentUpon>GerenciarU.xaml</DependentUpon>
     </Compile>
     <Compile Include="HUsuario.xaml.cs">
       <DependentUpon>HUsuario.xaml</DependentUpon>

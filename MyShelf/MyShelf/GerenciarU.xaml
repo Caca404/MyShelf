@@ -1,0 +1,23 @@
+﻿<Window x:Class="MyShelf.GerenciarU"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyShelf"
+        mc:Ignorable="d"
+        Title="GerenciarU" Height="356.865" Width="479.098">
+    <Grid>
+
+        <GroupBox Header="Gerenciar Usuários" HorizontalAlignment="Left" Height="294" Margin="10,10,0,0" VerticalAlignment="Top" Width="415">
+            <Grid>
+                <Button Content="Listar" HorizontalAlignment="Left" Height="22" Margin="10,150,0,0"  VerticalAlignment="Top" Width="102"/>
+                <ListBox HorizontalAlignment="Left" Height="104" Margin="10,22,0,0" VerticalAlignment="Top" Width="354"/>
+                <Button Content="Banir" HorizontalAlignment="Left" Height="22" Margin="9,185,0,0" VerticalAlignment="Top" Width="102"/>
+
+            </Grid>
+        </GroupBox>
+
+
+
+    </Grid>
+</Window>

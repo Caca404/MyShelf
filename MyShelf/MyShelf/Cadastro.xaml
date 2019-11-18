@@ -12,6 +12,7 @@
         <TextBox HorizontalAlignment="Left" Height="44" Margin="167,222,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="389"/>
         <TextBlock HorizontalAlignment="Left" Margin="315,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="116"><Run Text="Cadastro"/><Run Text=" do Usuário"/></TextBlock>
         <Button Content="Cadastrar" HorizontalAlignment="Left" Height="29" Margin="431,290,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click"/>
+        <Button Content="Inserir Imagem" HorizontalAlignment="Left" Margin="431,331,0,0" VerticalAlignment="Top" Width="125" Height="29"/>
 
     </Grid>
 </Window>

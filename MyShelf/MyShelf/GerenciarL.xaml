@@ -1,0 +1,23 @@
+﻿<Window x:Class="MyShelf.GerenciarL"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyShelf"
+        mc:Ignorable="d"
+        Title="GerenciarL" Height="313.524" Width="560.246">
+    <Grid>
+
+        <GroupBox Header="Gerenciar Livros" HorizontalAlignment="Left" Height="250" Margin="10,10,0,0" VerticalAlignment="Top" Width="518">
+            <Grid>
+                <ListBox HorizontalAlignment="Left" Height="113" Margin="10,30,0,0" VerticalAlignment="Top" Width="463"/>
+                <Button Content="Listar" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.711,0.409" Height="22"/>
+                <Button Content="Adicionar" HorizontalAlignment="Left" Margin="132,164,0,0" VerticalAlignment="Top" Width="102" Height="22"/>
+                <Button Content="Excluir" HorizontalAlignment="Left" Margin="260,164,0,0" VerticalAlignment="Top" Width="102" Height="22"/>
+                <Button Content="Atualizar" HorizontalAlignment="Left" Margin="394,164,0,0" VerticalAlignment="Top" Width="102" Height="22"/>
+            </Grid>
+        </GroupBox>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="MyShelf.Estante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyShelf"
+        mc:Ignorable="d"
+        Title="Estante" Height="421.414" Width="578.689">
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="328" Margin="32,20,0,0" VerticalAlignment="Top" Width="505"/>
+        <ComboBox SelectionChanged="ComboBox_SelectionChanged" Margin="46,32,449,342">
+            <ComboBoxItem>Quero Ler</ComboBoxItem>
+            <ComboBoxItem>Já Li</ComboBoxItem>
+            <ComboBoxItem>Lendo</ComboBoxItem>
+            <ComboBoxItem>Favoritos</ComboBoxItem>
+            <ComboBoxItem>Todos</ComboBoxItem>
+        </ComboBox>
+
+
+
+    </Grid>
+</Window>
