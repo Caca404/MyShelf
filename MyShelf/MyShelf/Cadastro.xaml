@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="Cadastro" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="44" Margin="167,86,0,0" TextWrapping="Wrap" Text="Nome do user" VerticalAlignment="Top" Width="389"/>
-        <TextBox HorizontalAlignment="Left" Height="44" Margin="167,150,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="389"/>
-        <TextBox HorizontalAlignment="Left" Height="44" Margin="167,222,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="389"/>
-        <TextBlock HorizontalAlignment="Left" Margin="315,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="116"><Run Text="Cadastro"/><Run Text=" do Usuário"/></TextBlock>
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Height="29" Margin="431,290,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click"/>
-        <Button Content="Inserir Imagem" HorizontalAlignment="Left" Margin="431,331,0,0" VerticalAlignment="Top" Width="125" Height="29"/>
+        Title="Cadastro" Height="445.389" Width="458.812">
+    <Grid Margin="10,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="44" Margin="22,66,0,0" TextWrapping="Wrap" Text="Nome do user" VerticalAlignment="Top" Width="389"/>
+        <TextBox HorizontalAlignment="Left" Height="44" Margin="22,130,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="389"/>
+        <TextBox HorizontalAlignment="Left" Height="44" Margin="22,202,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="389"/>
+        <TextBlock HorizontalAlignment="Left" Margin="157,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="116"><Run Text="Cadastro"/><Run Text=" do Usuário"/></TextBlock>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Height="51" Margin="104,313,0,0" VerticalAlignment="Top" Width="220" Click="Button_Click"/>
+        <Button Content="Inserir Imagem" HorizontalAlignment="Left" Margin="148,260,0,0" VerticalAlignment="Top" Width="125" Height="29"/>
 
     </Grid>
 </Window>

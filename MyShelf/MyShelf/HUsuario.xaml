@@ -9,7 +9,7 @@
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="33" Margin="545,45,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="148" TextChanged="TextBox_TextChanged"/>
         <Button Content="🔎" HorizontalAlignment="Left" Height="33" Margin="709,45,0,0" VerticalAlignment="Top" Width="54"/>
-        <Button Content="Estante📚 " HorizontalAlignment="Left" Height="31" Margin="118,181,0,0" VerticalAlignment="Top" Width="241"/>
+        <Button Content="Estante📚 " HorizontalAlignment="Left" Height="68" Margin="263,249,0,0" FontSize="30" VerticalAlignment="Top" Width="257"/>
         <TextBlock HorizontalAlignment="Left" Height="106" Margin="118,27,0,0" TextWrapping="Wrap" Text="MyShelf" FontSize="70" VerticalAlignment="Top" Width="293"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="18,33,0,0" VerticalAlignment="Top" Width="100"/>
 
