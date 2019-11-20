@@ -11,7 +11,7 @@
         <GroupBox Header="Gerenciar Livros" HorizontalAlignment="Left" Height="250" Margin="10,10,0,0" VerticalAlignment="Top" Width="518">
             <Grid>
                 <ListBox HorizontalAlignment="Left" Height="113" Margin="10,30,0,0" VerticalAlignment="Top" Width="463"/>
-                <Button Content="Listar" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.711,0.409" Height="22"/>
+                <Button Content="Listar" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.711,0.409" Height="22" Click="ListarL"/>
                 <Button Content="Adicionar" HorizontalAlignment="Left" Margin="132,164,0,0" VerticalAlignment="Top" Width="102" Height="22"/>
                 <Button Content="Excluir" HorizontalAlignment="Left" Margin="260,164,0,0" VerticalAlignment="Top" Width="102" Height="22"/>
                 <Button Content="Atualizar" HorizontalAlignment="Left" Margin="394,164,0,0" VerticalAlignment="Top" Width="102" Height="22"/>

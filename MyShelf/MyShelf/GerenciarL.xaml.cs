@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Livro;
 
 namespace MyShelf
 {
@@ -22,6 +23,11 @@ namespace MyShelf
         public GerenciarL()
         {
             InitializeComponent();
+        }
+
+        private void ListarL(object sender, RoutedEventArgs e)
+        {
+            LivroN l = new LivroN();
         }
     }
 }

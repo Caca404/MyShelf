@@ -157,5 +157,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Livro\Livro.csproj">
+      <Project>{90de6105-b57a-45f4-9495-8ec524075adb}</Project>
+      <Name>Livro</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
