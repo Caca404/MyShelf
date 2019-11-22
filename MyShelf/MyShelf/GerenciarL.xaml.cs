@@ -45,7 +45,17 @@ namespace MyShelf
 
         private void del(object sender, RoutedEventArgs e)
         {
-            livros.SelectedItem;
+            if (livros.SelectedItem != null)
+            {
+                NLivro l = new NLivro();
+                l.Delete((livros.SelectedItem) as Livro.Livro);
+            }
+        }
+
+        private void att(object sender, RoutedEventArgs e)
+        {
+            Window n = new Att(livros.SelectedItem as Livro.Livro);
+            n.ShowDialog();
         }
     }
 }

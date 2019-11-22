@@ -18,12 +18,12 @@ namespace Livro
             ISBN = i;
             Ano = ano;
         }
-        internal int Id { get; set; }
-        internal string Nome { get; set; }
-        internal string Autor { get; set; }
-        internal string Genero { get; set; }
-        internal string ISBN { get; set; }
-        internal int Ano { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Autor { get; set; }
+        public string Genero { get; set; }
+        public string ISBN { get; set; }
+        public int Ano { get; set; }
         public override string ToString()
         {
             return $"{Id} {Nome} {Autor} {Genero} {Ano} {ISBN}";

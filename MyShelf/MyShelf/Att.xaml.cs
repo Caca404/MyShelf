@@ -16,22 +16,27 @@ using Livro;
 namespace MyShelf
 {
     /// <summary>
-    /// Lógica interna para Add.xaml
+    /// Lógica interna para Att.xaml
     /// </summary>
-    public partial class Add : Window
+    public partial class Att : Window
     {
-        public Add()
+        public Att(Livro.Livro l)
         {
             InitializeComponent();
+            li = l;
+            n.Text = li.Nome;
+            g.Text = li.Genero;
+            ano.Text = li.Ano.ToString();
+            a.Text = li.Autor;
+            i.Text = li.ISBN;
         }
-        private int k = 1;
-        private void ad(object sender, RoutedEventArgs e)
+        
+        private Livro.Livro li;
+        private void att(object sender, RoutedEventArgs e)
         {
-            Livro.Livro l = new Livro.Livro(n.Text,a.Text,g.Text,i.Text,int.Parse(ano.Text),k++);
-            NLivro li = new NLivro();
-            li.Add(l);
+            NLivro p = new NLivro();
+            p.Update(li);
             Close();
         }
-
     }
 }
