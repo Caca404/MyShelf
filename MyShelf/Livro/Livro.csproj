@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Livro.cs" />
-    <Compile Include="LivroN.cs" />
-    <Compile Include="LivroP.cs" />
+    <Compile Include="NLivro.cs" />
+    <Compile Include="PLivro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

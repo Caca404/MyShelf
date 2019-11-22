@@ -10,19 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MyShelf
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para MainWindow.xaml
     /// </summary>
-    public partial class Cadastro : Window
+    public partial class MainWindow : Window
     {
-        public Cadastro()
+        public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void JanelaG(object sender, RoutedEventArgs e)
+        {
+            Window janela = new GerenciarL();
+            janela.ShowDialog();
         }
     }
 }

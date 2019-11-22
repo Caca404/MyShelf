@@ -10,19 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Livro;
 
 namespace MyShelf
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para Add.xaml
     /// </summary>
-    public partial class Cadastro : Window
+    public partial class Add : Window
     {
-        public Cadastro()
+        public Add()
         {
             InitializeComponent();
+        }
+        private int k = 1;
+        private void ad(object sender, RoutedEventArgs e)
+        {
+            Livro.Livro l = new Livro.Livro(n.Text,a.Text,g.Text,i.Text,int.Parse(ano.Text),k++);
+            NLivro li = new NLivro();
+            li.Add(l);
+            Close();
         }
     }
 }

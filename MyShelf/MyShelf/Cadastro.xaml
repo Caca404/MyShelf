@@ -14,7 +14,7 @@
         <TextBox HorizontalAlignment="Left" Height="44" Margin="22,130,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="389"/>
         <TextBox HorizontalAlignment="Left" Height="44" Margin="22,202,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="389"/>
         <TextBlock HorizontalAlignment="Left" Margin="157,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="116"><Run Text="Cadastro"/><Run Text=" do Usuário"/></TextBlock>
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Height="51" Margin="104,313,0,0" VerticalAlignment="Top" Width="220" Click="Button_Click"/>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Height="51" Margin="104,313,0,0" VerticalAlignment="Top" Width="220"/>
         <Button Content="Inserir Imagem" HorizontalAlignment="Left" Margin="148,260,0,0" VerticalAlignment="Top" Width="125" Height="29"/>
 
     </Grid>

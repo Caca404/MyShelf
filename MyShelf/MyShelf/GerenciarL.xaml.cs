@@ -27,7 +27,25 @@ namespace MyShelf
 
         private void ListarL(object sender, RoutedEventArgs e)
         {
-            LivroN l = new LivroN();
+            NLivro l = new NLivro();
+            livros.ItemsSource = l.Listar();
+        }
+
+        private void Pesq(object sender, RoutedEventArgs e)
+        {
+            NLivro l = new NLivro();
+            livros.ItemsSource = l.Pesquisar(pes.Text);
+        }
+
+        private void newa(object sender, RoutedEventArgs e)
+        {
+            Window n = new Add();
+            n.ShowDialog();
+        }
+
+        private void del(object sender, RoutedEventArgs e)
+        {
+            livros.SelectedItem;
         }
     }
 }
