@@ -17,9 +17,9 @@ namespace MyShelf
     /// <summary>
     /// Lógica interna para Funcionario.xaml
     /// </summary>
-    public partial class Funcionario : Window
+    public partial class funcionario : Window
     {
-        public Funcionario()
+        public funcionario()
         {
             InitializeComponent();
         }

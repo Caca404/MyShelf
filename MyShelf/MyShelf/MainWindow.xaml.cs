@@ -26,7 +26,7 @@ namespace MyShelf
 
         private void JanelaG(object sender, RoutedEventArgs e)
         {
-            Window janela = new GerenciarL();
+            Window janela = new Adm();
             janela.ShowDialog();
         }
     }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Funcionario;
 
 namespace MyShelf
 {
@@ -22,6 +23,32 @@ namespace MyShelf
         public GerenciarF()
         {
             InitializeComponent();
+        }
+
+        private void Listar (object sender, RoutedEventArgs e)
+        {
+            NFuncionario f = new NFuncionario();
+            funcionarios.ItemsSource = f.Listar();
+        }
+
+        private void Adicionar(object sender, RoutedEventArgs e)
+        {
+            Window n = new Add();
+            n.ShowDialog();
+        }
+
+        private void Excluir(object sender, RoutedEventArgs e)
+        {
+            if (funcionarios.SelectedItem != null)
+            {
+                NFuncionario l = new NFuncionario();
+                l.Excluir((funcionarios.SelectedItem) as Funcionario.Funcionario);
+            }
+        }
+
+        private void Atualizar(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

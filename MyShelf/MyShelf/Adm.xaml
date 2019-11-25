@@ -7,10 +7,18 @@
         mc:Ignorable="d"
         Title="Adm" Height="459.701" Width="610.148">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="106" Margin="20,10,0,0" TextWrapping="Wrap" Text="MyShelf" FontSize="70" VerticalAlignment="Top" Width="293"/>
-        <Button Content="Gerenciar Funcionários" HorizontalAlignment="Left" Margin="181,144,0,0" VerticalAlignment="Top" Width="210" Height="41"/>
-        <Button Content="Gerenciar Usuários" HorizontalAlignment="Left" Margin="181,230,0,0" VerticalAlignment="Top" Width="210" Height="41"/>
-        <Button Content="Gerenciar Livros" HorizontalAlignment="Left" Margin="181,318,0,0" VerticalAlignment="Top" Width="210" Height="41"/>
+        <TextBlock HorizontalAlignment="Left" Height="106" Margin="109,75,0,0" TextWrapping="Wrap" Text="MyShelf 📚" FontSize="70" VerticalAlignment="Top" Width="403"/>
+        
+        
+        <Menu Name="Mn" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="602">
+            
+            <MenuItem Header="Menu"> 
+                <MenuItem Header="Gerenciar Funcionários" Click="GF"/>
+                <MenuItem Header="Gerenciar Usuários" Click="GU"/>
+                <MenuItem Header="Gerenciar Livros" Click="GL"/>
+                
+            </MenuItem>
+        </Menu>
 
     </Grid>
 </Window>

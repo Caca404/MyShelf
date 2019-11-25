@@ -71,7 +71,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Funcionario.xaml">
+    <Page Include="funcionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,8 +115,8 @@
     <Compile Include="Estante.xaml.cs">
       <DependentUpon>Estante.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Funcionario.xaml.cs">
-      <DependentUpon>Funcionario.xaml</DependentUpon>
+    <Compile Include="funcionario.xaml.cs">
+      <DependentUpon>funcionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="GerenciarF.xaml.cs">
       <DependentUpon>GerenciarF.xaml</DependentUpon>
@@ -179,6 +179,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Funcionario\Funcionario.csproj">
+      <Project>{7f0e038a-e4cb-4b86-9450-11e789111a76}</Project>
+      <Name>Funcionario</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Livro\Livro.csproj">
       <Project>{90de6105-b57a-45f4-9495-8ec524075adb}</Project>
       <Name>Livro</Name>
