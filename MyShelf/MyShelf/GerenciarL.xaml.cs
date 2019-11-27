@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Livro;
+using Pesistencia;
 
 namespace MyShelf
 {
@@ -48,13 +48,13 @@ namespace MyShelf
             if (livros.SelectedItem != null)
             {
                 NLivro l = new NLivro();
-                l.Delete((livros.SelectedItem) as Livro.Livro);
+                l.Delete((livros.SelectedItem) as Pesistencia.Livro);
             }
         }
 
         private void att(object sender, RoutedEventArgs e)
         {
-            Window n = new Att(livros.SelectedItem as Livro.Livro);
+            Window n = new Att(livros.SelectedItem as Pesistencia.Livro);
             n.ShowDialog();
         }
     }

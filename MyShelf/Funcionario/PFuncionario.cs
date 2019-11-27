@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
+using Modelo;
 
-namespace Funcionario
+namespace Pesistencia
 {
-    class PFuncionario
+    public class PFuncionario
     {
         private string arquivo = "Funcionario.xml";
         public List<Funcionario> Open()

@@ -179,13 +179,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Funcionario\Funcionario.csproj">
-      <Project>{7f0e038a-e4cb-4b86-9450-11e789111a76}</Project>
-      <Name>Funcionario</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Livro\Livro.csproj">
+    <ProjectReference Include="..\Livro\Negocio.csproj">
       <Project>{90de6105-b57a-45f4-9495-8ec524075adb}</Project>
-      <Name>Livro</Name>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{49f90d31-99bd-4506-9d1a-15b13dd5112b}</Project>
+      <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

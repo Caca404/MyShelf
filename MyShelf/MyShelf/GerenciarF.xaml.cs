@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Funcionario;
+using Pesistencia;
 
 namespace MyShelf
 {
@@ -42,7 +42,7 @@ namespace MyShelf
             if (funcionarios.SelectedItem != null)
             {
                 NFuncionario l = new NFuncionario();
-                l.Excluir((funcionarios.SelectedItem) as Funcionario.Funcionario);
+                l.Excluir((funcionarios.SelectedItem) as Pesistencia.Funcionario);
             }
         }
 

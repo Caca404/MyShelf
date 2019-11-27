@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90DE6105-B57A-45F4-9495-8EC524075ADB}</ProjectGuid>
+    <ProjectGuid>{7F0E038A-E4CB-4B86-9450-11E789111A76}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Livro</RootNamespace>
-    <AssemblyName>Livro</AssemblyName>
+    <RootNamespace>Funcionario</RootNamespace>
+    <AssemblyName>Funcionario</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Livro.cs" />
-    <Compile Include="NLivro.cs" />
+    <Compile Include="PFuncionario.cs" />
     <Compile Include="PLivro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{49f90d31-99bd-4506-9d1a-15b13dd5112b}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

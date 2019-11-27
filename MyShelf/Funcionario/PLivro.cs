@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
+using Modelo;
 
-namespace Livro
+namespace Pesistencia
 {
-    internal class PLivro
+    public class PLivro
     {
         private string arquivo = "Livro.xml";
         public List<Livro> Open()

@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Livro;
+using Pesistencia;
 
 namespace MyShelf
 {
@@ -20,7 +20,7 @@ namespace MyShelf
     /// </summary>
     public partial class Att : Window
     {
-        public Att(Livro.Livro l)
+        public Att(Pesistencia.Livro l)
         {
             InitializeComponent();
             li = l;
@@ -31,7 +31,7 @@ namespace MyShelf
             i.Text = li.ISBN;
         }
         
-        private Livro.Livro li;
+        private Pesistencia.Livro li;
         private void att(object sender, RoutedEventArgs e)
         {
             NLivro p = new NLivro();
