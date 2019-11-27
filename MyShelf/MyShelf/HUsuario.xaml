@@ -7,11 +7,16 @@
         mc:Ignorable="d"
         Title="HUsuario" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="545,45,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="148" TextChanged="TextBox_TextChanged"/>
-        <Button Content="🔎" HorizontalAlignment="Left" Height="33" Margin="709,45,0,0" VerticalAlignment="Top" Width="54"/>
-        <Button Content="Estante📚 " HorizontalAlignment="Left" Height="68" Margin="263,249,0,0" FontSize="30" VerticalAlignment="Top" Width="257"/>
-        <TextBlock HorizontalAlignment="Left" Height="106" Margin="118,27,0,0" TextWrapping="Wrap" Text="MyShelf" FontSize="70" VerticalAlignment="Top" Width="293"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="18,33,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="539,64,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="148" FontSize="20"/>
+        <Button Content="🔎" HorizontalAlignment="Left" Height="33" Margin="709,64,0,0" VerticalAlignment="Top" Width="54"/>
+        <Button Content="Estante📚 " HorizontalAlignment="Left" Height="68" Margin="272,309,0,0" FontSize="30" VerticalAlignment="Top" Width="257"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,140,0,173" TextWrapping="Wrap" Text="Bem vindo ao MyShelf" FontSize="70" Width="732"/>
+        <Menu x:Name="menu" Height="41" VerticalAlignment="Top">
+            <MenuItem Header="Leitor" Height="41" Width="80" FontSize="20">
+                <MenuItem Header="Editar informações"/>
+                <MenuItem Header="Pesquisar"/>
+            </MenuItem>
+        </Menu>
 
 
 

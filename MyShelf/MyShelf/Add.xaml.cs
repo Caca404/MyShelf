@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Pesistencia;
+using Negocio;
 
 namespace MyShelf
 {
@@ -27,7 +27,7 @@ namespace MyShelf
         private int k = 1;
         private void ad(object sender, RoutedEventArgs e)
         {
-            Pesistencia.Livro l = new Pesistencia.Livro(n.Text,a.Text,g.Text,i.Text,int.Parse(ano.Text),k++);
+            Livro l = new Pesistencia.Livro(n.Text,a.Text,g.Text,i.Text,int.Parse(ano.Text),k++);
             NLivro li = new NLivro();
             li.Add(l);
             Close();

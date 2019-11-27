@@ -11,26 +11,26 @@ namespace Pesistencia
 {
     public class PFuncionario
     {
-        private string arquivo = "Funcionario.xml";
-        public List<Funcionario> Open()
+        private string arquivo = "Funcionarios.xml";
+        public List<Usuário> Open()
         {
-            XmlSerializer x = new XmlSerializer(typeof(List<Funcionario>));
+            XmlSerializer x = new XmlSerializer(typeof(List<Usuário>));
             StreamReader f = null;
-            List<Funcionario> cs = null;
+            List<Usuário> cs = null;
             try
             {
                 f = new StreamReader(arquivo, Encoding.Default);
-                cs = x.Deserialize(f) as List<Funcionario>;
+                cs = x.Deserialize(f) as List<Usuário>;
             }
-            catch { cs = new List<Funcionario>(); }
+            catch { cs = new List<Usuário>(); }
 
             finally { if (f != null) f.Close(); }
 
             return cs;
         }
-        public void Save(List<Funcionario> cs)
+        public void Save(List<Usuário> cs)
         {
-            XmlSerializer x = new XmlSerializer(typeof(List<Funcionario>));
+            XmlSerializer x = new XmlSerializer(typeof(List<Usuário>));
             StreamWriter f = new StreamWriter(arquivo, false, Encoding.Default);
             x.Serialize(f, cs);
             f.Close();
