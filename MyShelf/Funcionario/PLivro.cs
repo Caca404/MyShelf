@@ -12,6 +12,36 @@ namespace Pesistencia
     public class PLivro
     {
         private string arquivo = "Livro.xml";
+        private string arq = "k.xml";
+        public int OpenK()
+        {
+            XmlSerializer x = new XmlSerializer(typeof(int));
+            StreamReader f = null;
+            string cs = "0";
+            int k = 0;
+            try
+            {
+                f = new StreamReader(arq, Encoding.Default);
+                cs = x.Deserialize(f) as string;
+            }
+            catch { cs = "0"; }
+            finally
+            {
+                if (f != null)
+                {
+                    f.Close();
+                    k = int.Parse(cs);
+                }
+            }
+            return k;
+        }
+        public void SaveK(int k)
+        {
+            XmlSerializer x = new XmlSerializer(typeof(int));
+            StreamWriter f = new StreamWriter(arq, false, Encoding.Default);
+            x.Serialize(f, k);
+            f.Close();
+        }
         public List<Livro> Open()
         {
             XmlSerializer x = new XmlSerializer(typeof(List<Livro>));

@@ -12,8 +12,11 @@ namespace Modelo
         public string Nome { get; set; }
         public string Matricula { get; set; }
         public string Email { get; set; }
-        private string Senha;
+        public string Telefone { get; set; }
+        public DateTime Data { get; set; }
+        public string Senha { get; set; }
         public int Tipo { get; set; }
+        public Usuário() {}
         public Usuário(int id, string n, string mat, string e, string sen, int t)
         {
             Id = id;

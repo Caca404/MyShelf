@@ -10,10 +10,19 @@ namespace Negocio
 {
     public class NLivro
     {
+        PLivro p = new PLivro();
         private List<Livro> ls;
+        public int GetK()
+        {
+            return p.OpenK();
+        }
+        public void SetK(int k)
+        {
+            p.SaveK(k);
+        }
         public List<Livro> Pesquisar(string nome)
         {
-            PLivro p = new PLivro();
+            
             List<Livro> cs = p.Open().OrderBy(c => c.Nome).ToList();
             List<Livro> r = new List<Livro>();
             foreach (Livro c in cs)

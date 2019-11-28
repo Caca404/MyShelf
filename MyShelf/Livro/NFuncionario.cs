@@ -11,9 +11,18 @@ namespace Negocio
     public class NFuncionario
     {
         private List<Usuário> ls;
+        PFuncionario p = new PFuncionario();
+        public int GetK()
+        {
+            return p.OpenK();
+        }
+        public void SetK(int k)
+        {
+            p.SaveK(k);
+        }
         public List<Usuário> Listar()
         {
-            PFuncionario p = new PFuncionario();
+            
             ls = p.Open().OrderBy(c => c.Nome).ToList();
             return ls;
         }

@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Pesistencia;
+using Modelo;
+using Negocio;
 
 namespace MyShelf
 {
@@ -20,35 +21,41 @@ namespace MyShelf
     /// </summary>
     public partial class GerenciarF : Window
     {
+        NFuncionario f = new NFuncionario();
         public GerenciarF()
         {
             InitializeComponent();
-        }
-
-        private void Listar (object sender, RoutedEventArgs e)
-        {
-            NFuncionario f = new NFuncionario();
             funcionarios.ItemsSource = f.Listar();
         }
-
         private void Adicionar(object sender, RoutedEventArgs e)
         {
-            Window n = new Add();
-            n.ShowDialog();
+            Window n = new AddF();
+            if (n.ShowDialog().Value)
+            {
+                int k = f.GetK();
+                f.Adicionar((n as AddF).GetFuncionario(ref k));
+                funcionarios.ItemsSource = f.Listar();
+                f.SetK(k);
+            }
         }
 
         private void Excluir(object sender, RoutedEventArgs e)
         {
             if (funcionarios.SelectedItem != null)
             {
-                NFuncionario l = new NFuncionario();
-                l.Excluir((funcionarios.SelectedItem) as Pesistencia.Funcionario);
+                f.Excluir((funcionarios.SelectedItem) as Usuário);
+                funcionarios.ItemsSource = f.Listar();
             }
         }
 
         private void Atualizar(object sender, RoutedEventArgs e)
         {
-
+            Window n = new AttF(funcionarios.SelectedItem as Usuário);
+            if (n.ShowDialog().Value)
+            {
+                f.Atualizar((n as AttF).GetFuncionario());
+                funcionarios.ItemsSource = f.Listar();
+            }
         }
     }
 }

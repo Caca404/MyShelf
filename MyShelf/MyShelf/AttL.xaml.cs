@@ -11,16 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Pesistencia;
+using Modelo;
+using Negocio;
 
 namespace MyShelf
 {
     /// <summary>
     /// Lógica interna para Att.xaml
     /// </summary>
-    public partial class Att : Window
+    public partial class AttL : Window
     {
-        public Att(Pesistencia.Livro l)
+        public AttL(Livro l)
         {
             InitializeComponent();
             li = l;
@@ -30,13 +31,26 @@ namespace MyShelf
             a.Text = li.Autor;
             i.Text = li.ISBN;
         }
-        
-        private Pesistencia.Livro li;
+        private Livro li;
         private void att(object sender, RoutedEventArgs e)
         {
-            NLivro p = new NLivro();
-            p.Update(li);
-            Close();
+            DialogResult = true;
+        }
+        public Livro GetLivro()
+        {
+            Livro l = new Livro();
+            l.Id = li.Id;
+            l.Nome = n.Text;
+            l.ISBN = i.Text;
+            l.Autor = a.Text;
+            l.Ano = int.Parse(ano.Text);
+            l.Genero = g.Text;
+            return l;
+        }
+
+        private void canc(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

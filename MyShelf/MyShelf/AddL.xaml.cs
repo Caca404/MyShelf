@@ -12,26 +12,37 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Negocio;
+using Modelo;
 
 namespace MyShelf
 {
     /// <summary>
     /// Lógica interna para Add.xaml
     /// </summary>
-    public partial class Add : Window
+    public partial class AddL : Window
     {
-        public Add()
+        public AddL()
         {
             InitializeComponent();
         }
-        private int k = 1;
         private void ad(object sender, RoutedEventArgs e)
         {
-            Livro l = new Pesistencia.Livro(n.Text,a.Text,g.Text,i.Text,int.Parse(ano.Text),k++);
-            NLivro li = new NLivro();
-            li.Add(l);
-            Close();
+            DialogResult = true;
         }
-
+        private void canc(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+        public Livro GetLivro(ref int k)
+        {
+            Livro l = new Livro();
+            l.Id = k++;
+            l.Nome = n.Text;
+            l.ISBN = i.Text;
+            l.Autor = a.Text;
+            l.Ano = int.Parse(ano.Text);
+            l.Genero = g.Text;
+            return l;
+        }
     }
 }

@@ -55,7 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Add.xaml">
+    <Page Include="AddF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -63,7 +67,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Att.xaml">
+    <Page Include="AttF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AttL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,16 +99,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Cadastro.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Add.xaml.cs">
-      <DependentUpon>Add.xaml</DependentUpon>
+    <Compile Include="AddF.xaml.cs">
+      <DependentUpon>AddF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddL.xaml.cs">
+      <DependentUpon>AddL.xaml</DependentUpon>
     </Compile>
     <Compile Include="Adm.xaml.cs">
       <DependentUpon>Adm.xaml</DependentUpon>
@@ -109,8 +116,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Att.xaml.cs">
-      <DependentUpon>Att.xaml</DependentUpon>
+    <Compile Include="AttF.xaml.cs">
+      <DependentUpon>AttF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AttL.xaml.cs">
+      <DependentUpon>AttL.xaml</DependentUpon>
     </Compile>
     <Compile Include="Estante.xaml.cs">
       <DependentUpon>Estante.xaml</DependentUpon>
@@ -129,9 +139,6 @@
     </Compile>
     <Compile Include="HUsuario.xaml.cs">
       <DependentUpon>HUsuario.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cadastro.xaml.cs">
       <DependentUpon>Cadastro.xaml</DependentUpon>
