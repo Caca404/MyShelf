@@ -33,10 +33,9 @@ namespace MyShelf
         {
             DialogResult = false;
         }
-        public Livro GetLivro(ref int k)
+        public Livro GetLivro()
         {
             Livro l = new Livro();
-            l.Id = k++;
             l.Nome = n.Text;
             l.ISBN = i.Text;
             l.Autor = a.Text;

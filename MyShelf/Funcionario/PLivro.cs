@@ -7,7 +7,7 @@ using System.IO;
 using System.Xml.Serialization;
 using Modelo;
 
-namespace Pesistencia
+namespace Persistencia
 {
     public class PLivro
     {

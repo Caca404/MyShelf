@@ -39,10 +39,8 @@ namespace MyShelf
             Window n = new AddL();
             if (n.ShowDialog().Value)
             {
-                int k = l.GetK();
-                l.Add((n as AddL).GetLivro(ref k));
+                l.Add((n as AddL).GetLivro());
                 livros.ItemsSource = l.Listar();
-                l.SetK(k);
             }
         }
 

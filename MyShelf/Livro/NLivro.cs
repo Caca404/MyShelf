@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Modelo;
-using Pesistencia;
+using Persistencia;
 
 namespace Negocio
 {
@@ -51,6 +51,9 @@ namespace Negocio
         {
             PLivro p = new PLivro();
             ls = p.Open();
+            int m = 0;
+            foreach (Livro x in ls) if (x.Id > m) m = x.Id;
+            l.Id = m + 1;
             ls.Add(l);
             p.Save(ls);
         }

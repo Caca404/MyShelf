@@ -32,7 +32,7 @@ namespace MyShelf
         {
             DialogResult = false;
         }
-        public Usuário GetFuncionario(ref int k)
+        public Usuário GetFuncionario()
         {
             Usuário u = new Usuário();
             u.Email = e.Text;
@@ -40,9 +40,6 @@ namespace MyShelf
             u.Tipo = 1;
             u.Telefone = tel.Text;
             u.Data = DateTime.Parse(ano.Text);
-            u.Matricula = k.ToString() + "2019";k++;
-            u.Senha = u.Matricula;
-            MessageBox.Show($"Email: {u.Email}\nSenha: {u.Senha}");
             return u;
         }
     }

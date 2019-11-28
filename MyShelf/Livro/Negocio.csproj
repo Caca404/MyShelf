@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Funcionario\Pesistencia.csproj">
+    <ProjectReference Include="..\Funcionario\Persistencia.csproj">
       <Project>{7f0e038a-e4cb-4b86-9450-11e789111a76}</Project>
-      <Name>Pesistencia</Name>
+      <Name>Persistencia</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{49f90d31-99bd-4506-9d1a-15b13dd5112b}</Project>

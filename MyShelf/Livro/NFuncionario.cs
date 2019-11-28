@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Modelo;
-using Pesistencia;
+using Persistencia;
 
 namespace Negocio
 {
@@ -12,17 +12,8 @@ namespace Negocio
     {
         private List<Usuário> ls;
         PFuncionario p = new PFuncionario();
-        public int GetK()
-        {
-            return p.OpenK();
-        }
-        public void SetK(int k)
-        {
-            p.SaveK(k);
-        }
         public List<Usuário> Listar()
         {
-            
             ls = p.Open().OrderBy(c => c.Nome).ToList();
             return ls;
         }
@@ -30,6 +21,11 @@ namespace Negocio
         {
             PFuncionario p = new PFuncionario();
             ls = p.Open();
+            int m = 0;
+            foreach (Usuário x in ls) if (x.Id > m) m = x.Id;
+            f.Id = m + 1;
+            f.Matricula = f.Id.ToString() + "2019";
+            f.Senha = f.Matricula;
             ls.Add(f);
             p.Save(ls);
         }

@@ -32,10 +32,8 @@ namespace MyShelf
             Window n = new AddF();
             if (n.ShowDialog().Value)
             {
-                int k = f.GetK();
-                f.Adicionar((n as AddF).GetFuncionario(ref k));
+                f.Adicionar((n as AddF).GetFuncionario());
                 funcionarios.ItemsSource = f.Listar();
-                f.SetK(k);
             }
         }
 

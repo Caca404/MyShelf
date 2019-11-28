@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShelf", "MyShelf\MyShelf.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Livro\Negocio.csproj", "{90DE6105-B57A-45F4-9495-8EC524075ADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pesistencia", "Funcionario\Pesistencia.csproj", "{7F0E038A-E4CB-4B86-9450-11E789111A76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Funcionario\Persistencia.csproj", "{7F0E038A-E4CB-4B86-9450-11E789111A76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{49F90D31-99BD-4506-9D1A-15B13DD5112B}"
 EndProject
