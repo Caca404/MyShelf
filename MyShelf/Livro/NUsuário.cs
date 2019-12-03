@@ -7,31 +7,28 @@ using Modelo;
 using Persistencia;
 
 namespace Negocio
-{
-    public class NFuncionario
+{    
+    public class NUsuário
     {
         private List<Usuário> ls;
-        PFuncionario p = new PFuncionario();
+        PUsuário p = new PUsuário();
         public List<Usuário> Listar()
         {
             ls = p.Open().OrderBy(c => c.Nome).ToList();
             return ls;
         }
-        public void Adicionar(Usuário f)
+        public void Cadastrar(Usuário f)
         {
-            PFuncionario p = new PFuncionario();
             ls = p.Open();
             int m = 0;
             foreach (Usuário x in ls) if (x.Id > m) m = x.Id;
             f.Id = m + 1;
             f.Matricula = f.Id.ToString() + "2019" + f.Tipo.ToString();
-            f.Senha = f.Matricula;
             ls.Add(f);
             p.Save(ls);
         }
         public void Excluir(Usuário c)
         {
-            PFuncionario p = new PFuncionario();
             List<Usuário> cs = p.Open();
             for (int i = 0; i < cs.Count; i++)
                 if (cs[i].Matricula == c.Matricula)
@@ -43,7 +40,6 @@ namespace Negocio
         }
         public void Atualizar(Usuário f)
         {
-            PFuncionario p = new PFuncionario();
             List<Usuário> cs = p.Open();
             for (int i = 0; i < cs.Count; i++)
                 if (cs[i].Matricula == f.Matricula)

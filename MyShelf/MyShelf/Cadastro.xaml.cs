@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modelo;
+using Negocio;
 
 namespace MyShelf
 {
@@ -23,6 +25,18 @@ namespace MyShelf
         public Cadastro()
         {
             InitializeComponent();
+        }
+
+        private void Cads(object sender, RoutedEventArgs e)
+        {
+            Usuário a = new Usuário();
+            a.Nome = user.Text;
+            a.Email = em.Text;
+            a.Senha = sen.Password;
+            a.Tipo = 2;
+            NUsuário f = new NUsuário();
+            f.Cadastrar(a);
+            Close();
         }
     }
 }

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Negocio;
+using Modelo;
 
 namespace MyShelf
 {
@@ -19,9 +21,21 @@ namespace MyShelf
     /// </summary>
     public partial class GerenciarU : Window
     {
+        NUsuário n = new NUsuário();
         public GerenciarU()
         {
             InitializeComponent();
+            grid.ItemsSource = n.Listar();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(grid.SelectedItem != null)
+            {
+                Usuário x = grid.SelectedItem as Usuário;
+                n.Excluir(x);
+                grid.ItemsSource = n.Listar();
+            }
         }
     }
 }
