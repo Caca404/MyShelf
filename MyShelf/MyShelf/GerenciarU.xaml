@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="GerenciarU" Height="356.865" Width="479.098">
-    <Grid>
+        Title="GerenciarU" Height="354.865" Width="482.098">
+    <Grid Margin="0,0,47,21">
 
         <GroupBox Header="Gerenciar Usuários" HorizontalAlignment="Left" Height="294" Margin="10,10,0,0" VerticalAlignment="Top" Width="415">
-            <Grid>
-                <ListBox Name="grid" HorizontalAlignment="Left" Height="104" Margin="10,22,0,0" VerticalAlignment="Top" Width="354"/>
-                <Button Content="Banir" HorizontalAlignment="Left" Height="53" Margin="110,153,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click"/>
+            <Grid Margin="0,0,-12,-22">
+                <ListBox Name="grid" HorizontalAlignment="Left" Height="166" Margin="22,32,0,0" VerticalAlignment="Top" Width="360"/>
+                <Button Content="Banir" HorizontalAlignment="Left" Height="31" Margin="264,219,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click"/>
 
             </Grid>
         </GroupBox>

@@ -44,6 +44,9 @@ namespace MyShelf
             a.ShowDialog();
         }
 
-        
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

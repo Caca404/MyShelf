@@ -10,10 +10,10 @@
 
         <GroupBox Header="Gerenciar Livros" HorizontalAlignment="Left" Height="322" Margin="10,10,0,0" VerticalAlignment="Top" Width="684">
             <Grid>
-                <Button Content="Adicionar" HorizontalAlignment="Left" Margin="56,226,0,0" VerticalAlignment="Top" Width="150" Height="33" Click="newa"/>
-                <Button Click="del" Content="Excluir" HorizontalAlignment="Left" Margin="262,226,0,0" VerticalAlignment="Top" Width="150" Height="33"/>
-                <Button Content="Atualizar" HorizontalAlignment="Left" Margin="462,226,0,0" VerticalAlignment="Top" Width="150" Height="33" Click="att"/>
-                <TextBox Name="pes" HorizontalAlignment="Left" Height="25" Margin="447,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Text="Pesquisar" />
+                <Button Content="Adicionar" FontSize="15" HorizontalAlignment="Left" Margin="38,226,0,0" VerticalAlignment="Top" Width="150" Height="33" Click="newa"/>
+                <Button Click="del" Content="Excluir" FontSize="15" HorizontalAlignment="Left" Margin="262,226,0,0" VerticalAlignment="Top" Width="150" Height="33"/>
+                <Button Content="Atualizar"  FontSize="15" HorizontalAlignment="Left" Margin="483,226,0,0" VerticalAlignment="Top" Width="150" Height="33" Click="att"/>
+                <TextBox Name="pes" HorizontalAlignment="Left" Height="25" Margin="447,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="15" Text="Pesquisar" />
                 <Button Content="🔎" HorizontalAlignment="Left" Margin="601,10,0,0" VerticalAlignment="Top" Width="32" Height="25" Click="Pesq"/>
                 <ListBox Name="livros" HorizontalAlignment="Left" Height="158" Margin="38,47,0,0" VerticalAlignment="Top" Width="595"/>
 

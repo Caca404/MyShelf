@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="Pesquisa" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="545,45,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="148"/>
-        <Button Content="🔎" HorizontalAlignment="Left" Height="33" Margin="708,45,0,0" VerticalAlignment="Top" Width="54"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="114,99,0,0" TextWrapping="Wrap" Text="Livros encontrados:" FontSize="20" VerticalAlignment="Top" Width="208"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="581,43,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="148"/>
+        <Button Content="🔎" HorizontalAlignment="Left" Height="22" Margin="734,43,0,0" VerticalAlignment="Top" Width="28"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="51,125,0,0" TextWrapping="Wrap" Text="Livros encontrados:" FontSize="20" VerticalAlignment="Top" Width="208"/>
         <ListBox HorizontalAlignment="Left" Height="194" Margin="51,156,0,0" VerticalAlignment="Top" Width="711"/>
-        <Button Content="Home" HorizontalAlignment="Left" Height="24" Margin="114,49,0,0" VerticalAlignment="Top" Width="103"/>
-        <CheckBox Content="F" HorizontalAlignment="Left" Height="16" Margin="460,178,0,0" VerticalAlignment="Top" Width="36" Checked="CheckBox_Checked"/>
-        <CheckBox Content="QL" HorizontalAlignment="Left" Height="16" Margin="512,178,0,0" VerticalAlignment="Top" Width="52" Checked="CheckBox_Checked" RenderTransformOrigin="0.974,-0.997"/>
-        <CheckBox Content="L" HorizontalAlignment="Left" Height="16" Margin="585,178,0,0" VerticalAlignment="Top" Width="59" Checked="CheckBox_Checked"/>
-        <CheckBox Content="JL" HorizontalAlignment="Left" Height="16" Margin="668,178,0,0" VerticalAlignment="Top" Width="45" Checked="CheckBox_Checked"/>
-        <TextBlock HorizontalAlignment="Left" Margin="76,369,0,0" TextWrapping="Wrap" Text="Legenda      F: Favoritos     QL: Quero ler     L: Lendo     JL: Já Lidos" VerticalAlignment="Top" Width="617"/>
+        <Button Content="Home" HorizontalAlignment="Left" Height="24" FontSize="15" Margin="51,20,0,0" VerticalAlignment="Top" Width="103"/>
+        <CheckBox Content="F" HorizontalAlignment="Left" Height="16" Margin="577,178,0,0" VerticalAlignment="Top" Width="36" Checked="CheckBox_Checked"/>
+        <CheckBox Content="QL" HorizontalAlignment="Left" Height="16" Margin="618,178,0,0" VerticalAlignment="Top" Width="52" Checked="CheckBox_Checked" RenderTransformOrigin="0.974,-0.997"/>
+        <CheckBox Content="L" HorizontalAlignment="Left" Height="16" Margin="670,178,0,0" VerticalAlignment="Top" Width="59" Checked="CheckBox_Checked"/>
+        <CheckBox Content="JL" HorizontalAlignment="Left" Height="16" Margin="706,178,0,0" VerticalAlignment="Top" Width="45" Checked="CheckBox_Checked"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="617"><Run Text="Legenda "/><LineBreak/><Run Text="F: Favoritos     QL: Quero ler     L: Lendo     JL: Já Lidos"/></TextBlock>
 
     </Grid>
 </Window>

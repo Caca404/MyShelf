@@ -10,13 +10,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox Name="user" HorizontalAlignment="Left" Height="44" Margin="22,66,0,0" TextWrapping="Wrap" Text="Nome do user" VerticalAlignment="Top" Width="389"/>
-        <TextBox Name="em" HorizontalAlignment="Left" Height="44" Margin="22,130,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="389"/>
-        <PasswordBox Name="sen" Margin="22,211,28,159" />
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Height="51" Margin="104,313,0,0" VerticalAlignment="Top" Width="220" Click="Cads"/>
-        <Button Content="Inserir Imagem" HorizontalAlignment="Left" Margin="148,270,0,0" VerticalAlignment="Top" Width="125" Height="29"/>
-        <TextBlock Text="Cadastro do Usuário" HorizontalAlignment="Left" Margin="157,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="116"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,190,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
+        <TextBox Name="user" HorizontalAlignment="Left" Height="44" Margin="27,83,0,0" TextWrapping="Wrap" Text="Nome de usario" VerticalAlignment="Top" Width="389" TextChanged="User_TextChanged"/>
+        <TextBox Name="em" HorizontalAlignment="Left" Height="44" Margin="27,147,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="389"/>
+        <PasswordBox Name="sen" Margin="27,217,23,153" />
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Height="42" Margin="104,339,0,0" VerticalAlignment="Top" Width="223" Click="Cads"/>
+        <Button Content="Inserir Imagem" HorizontalAlignment="Left" Margin="153,287,0,0" VerticalAlignment="Top" Width="125" Height="29"/>
+        <TextBlock Text="Cadastro do Usuário" FontSize="18" HorizontalAlignment="Left" Margin="127,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="182"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,219,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

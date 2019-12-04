@@ -38,5 +38,10 @@ namespace MyShelf
             f.Cadastrar(a);
             Close();
         }
+
+        private void User_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

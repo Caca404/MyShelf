@@ -8,7 +8,7 @@
         Title="Estante" Height="421.414" Width="578.689">
     <Grid>
         <ListBox HorizontalAlignment="Left" Height="328" Margin="32,20,0,0" VerticalAlignment="Top" Width="505"/>
-        <ComboBox SelectionChanged="ComboBox_SelectionChanged" Margin="46,32,449,342">
+        <ComboBox SelectionChanged="ComboBox_SelectionChanged" FontSize="15" Margin="46,32,449,342">
             <ComboBoxItem>Quero Ler</ComboBoxItem>
             <ComboBoxItem>Já Li</ComboBoxItem>
             <ComboBoxItem>Lendo</ComboBoxItem>

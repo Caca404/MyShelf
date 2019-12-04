@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="Add" Height="349.739" Width="480.639">
-    <Grid>
-        <TextBox Name="n" HorizontalAlignment="Left" Height="31" Margin="82,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="82,15,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="64"/>
-        <TextBox Name="a" HorizontalAlignment="Left" Height="31" Margin="238,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="238,15,0,0" TextWrapping="Wrap" Text="Autor" VerticalAlignment="Top" Width="64"/>
-        <TextBox Name="g" HorizontalAlignment="Left" Height="31" Margin="82,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="82,101,0,0" TextWrapping="Wrap" Text="Gênero" VerticalAlignment="Top" Width="64"/>
-        <TextBox Name="i" HorizontalAlignment="Left" Height="31" Margin="238,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="238,101,0,0" TextWrapping="Wrap" Text="ISBN" VerticalAlignment="Top" Width="64"/>
-        <TextBox Name="ano" HorizontalAlignment="Left" Height="31" Margin="168,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="168,178,0,0" TextWrapping="Wrap" Text="Ano de Criação" VerticalAlignment="Top" Width="86"/>
-        <Button Content="Adicionar" HorizontalAlignment="Left" Height="31" Margin="154,237,0,0" VerticalAlignment="Top" Width="137" Click="att"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Height="31" Margin="154,273,0,0" VerticalAlignment="Top" Width="137" Click="canc"/>
+        Title="Add" Height="327.196" Width="324.424">
+    <Grid HorizontalAlignment="Left" Width="303" Margin="0,0,0,1">
+        <TextBox Name="n" HorizontalAlignment="Left" Height="31" Margin="28,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="28,25,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="a" HorizontalAlignment="Left" Height="31" Margin="28,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="28,84,0,0" TextWrapping="Wrap" Text="Autor" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="g" HorizontalAlignment="Left" Height="31" Margin="28,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="162,145,0,0" TextWrapping="Wrap" Text="Gênero" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="i" HorizontalAlignment="Left" Height="31" Margin="162,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="28,145,0,0" TextWrapping="Wrap" Text="ISBN" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="ano" HorizontalAlignment="Left" Height="31" Margin="28,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="28,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"><Run Text="Ano de "/><Run Text="Publicação"/></TextBlock>
+        <Button Content="Adicionar" HorizontalAlignment="Left" Height="31" Margin="162,227,0,0" VerticalAlignment="Top" Width="124" Click="ad"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Height="20" Margin="244,275,-11,0" VerticalAlignment="Top" Width="70" Click="canc"/>
     </Grid>
 </Window>
