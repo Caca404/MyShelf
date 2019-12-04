@@ -6,11 +6,14 @@
         xmlns:local="clr-namespace:MyShelf"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="MyShelf.funcionario"
         mc:Ignorable="d"
-        Title="funcionario" Height="407" Width="569">
+        Title="funcionario" Height="366.783" Width="487.887">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="70" Margin="165,35,0,0" TextWrapping="Wrap" Text="MyShelf" FontSize="50" VerticalAlignment="Top" Width="192"/>
-        <Button Content="Gerenciar Usuários" HorizontalAlignment="Left" Margin="156,156,0,0" VerticalAlignment="Top" Width="210" Height="41"/>
-        <Button Content="Gerenciar Livros" HorizontalAlignment="Left" Margin="156,240,0,0" VerticalAlignment="Top" Width="210" Height="41"/>
-
+        <TextBlock HorizontalAlignment="Left" Height="106" Margin="111,122,0,0" TextWrapping="Wrap" FontSize="50" VerticalAlignment="Top" Width="318"><Run Text="MyShelf"/><Run FontSize="70" Text="📚"/></TextBlock>
+        <Menu Name="Mnf" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="480">
+            <MenuItem Header="Menu" FontSize="20" Height="40" Width="120">
+                <MenuItem Header="Gerenciar Usuários" Click="GU"/>
+                <MenuItem Header="Gerenciar Livros" Click="GL"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>

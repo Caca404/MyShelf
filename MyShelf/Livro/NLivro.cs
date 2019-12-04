@@ -12,14 +12,6 @@ namespace Negocio
     {
         PLivro p = new PLivro();
         private List<Livro> ls;
-        public int GetK()
-        {
-            return p.OpenK();
-        }
-        public void SetK(int k)
-        {
-            p.SaveK(k);
-        }
         public List<Livro> Pesquisar(string nome)
         {
             

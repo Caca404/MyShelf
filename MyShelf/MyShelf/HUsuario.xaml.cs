@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Modelo;
 
 namespace MyShelf
 {
@@ -19,9 +20,16 @@ namespace MyShelf
     /// </summary>
     public partial class HUsuario : Window
     {
-        public HUsuario()
+        public HUsuario(Usuário u)
         {
             InitializeComponent();
+            n.Header = u.Nome;
+        }
+
+        private void pesq(object sender, RoutedEventArgs e)
+        {
+            Pesquisa p = new Pesquisa(txtpes.Text);
+            p.ShowDialog();
         }
     }
 }

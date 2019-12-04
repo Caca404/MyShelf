@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Modelo;
+using Negocio;
 
 namespace MyShelf
 {
@@ -19,14 +21,12 @@ namespace MyShelf
     /// </summary>
     public partial class Pesquisa : Window
     {
-        public Pesquisa()
+        NLivro n = new NLivro();
+        public Pesquisa(string no)
         {
             InitializeComponent();
+            grid.ItemsSource = n.Pesquisar(no);
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

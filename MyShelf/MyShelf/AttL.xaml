@@ -17,7 +17,7 @@
         <TextBlock HorizontalAlignment="Left" Height="23" Margin="28,145,0,0" TextWrapping="Wrap" Text="ISBN" VerticalAlignment="Top" Width="64"/>
         <TextBox Name="ano" HorizontalAlignment="Left" Height="31" Margin="28,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
         <TextBlock HorizontalAlignment="Left" Height="23" Margin="28,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"><Run Text="Ano de "/><Run Text="Publicação"/></TextBlock>
-        <Button Content="Adicionar" HorizontalAlignment="Left" Height="31" Margin="162,227,0,0" VerticalAlignment="Top" Width="124" Click="ad"/>
+        <Button Content="Adicionar" HorizontalAlignment="Left" Height="31" Margin="162,227,0,0" VerticalAlignment="Top" Width="124" Click="att"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Height="20" Margin="244,275,-11,0" VerticalAlignment="Top" Width="70" Click="canc"/>
     </Grid>
 </Window>

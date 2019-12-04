@@ -23,5 +23,17 @@ namespace MyShelf
         {
             InitializeComponent();
         }
+
+        private void GU(object sender, RoutedEventArgs e)
+        {
+            GerenciarU u = new GerenciarU();
+            u.ShowDialog();
+        }
+
+        private void GL(object sender, RoutedEventArgs e)
+        {
+            GerenciarL l = new GerenciarL();
+            l.ShowDialog();
+        }
     }
 }

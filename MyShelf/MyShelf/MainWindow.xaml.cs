@@ -29,10 +29,11 @@ namespace MyShelf
         private void JanelaG(object sender, RoutedEventArgs e)
         {
             bool logou = false;
+            Usuário u = new Usuário();
             int i = 0;
             do
             { 
-                logou = VerificarSenha(ref i, user.Text, sen.Password);
+                logou = VerificarSenha(ref i, user.Text, sen.Password, ref u);
                 if (!logou) MessageBox.Show("Usuário ou senha inválidos");
                 else break;
             } while(logou);
@@ -52,13 +53,13 @@ namespace MyShelf
                 }
                 else if (i == 2)
                 {
-                    Window janela = new HUsuario();
+                    Window janela = new HUsuario(u);
                     Close();
                     janela.ShowDialog();
                 }
             }
         }
-        public static bool VerificarSenha(ref int p, string n, string s)
+        public static bool VerificarSenha(ref int p, string n, string s, ref Usuário u)
         {
             bool r = false;
             if (n == "Admin")
@@ -76,6 +77,7 @@ namespace MyShelf
                     {
                         r = true;
                         p = x.Tipo;
+                        u = x;
                         break;
                     }
                 }
@@ -90,6 +92,7 @@ namespace MyShelf
                     {
                         r = true;
                         p = x.Tipo;
+                        u = x;
                         break;
                     }
                 }
