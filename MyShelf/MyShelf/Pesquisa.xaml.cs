@@ -43,25 +43,28 @@ namespace MyShelf
         {
             i.lendo.Add(grid.SelectedItem as Livro);
             i.todos.Add(grid.SelectedItem as Livro);
+            u.Atualizar(i);
         }
 
         private void Favoritos(object sender, RoutedEventArgs e)
         {
             i.fav.Add(grid.SelectedItem as Livro);
             i.todos.Add(grid.SelectedItem as Livro);
-
+            u.Atualizar(i);
         }
 
         private void QueroLer(object sender, RoutedEventArgs e)
         {
             i.ql.Add(grid.SelectedItem as Livro);
             i.todos.Add(grid.SelectedItem as Livro);
+            u.Atualizar(i);
         }
 
         private void JaLi(object sender, RoutedEventArgs e)
         {
             i.jl.Add(grid.SelectedItem as Livro);
             i.todos.Add(grid.SelectedItem as Livro);
+            u.Atualizar(i);
         }
     }
 }

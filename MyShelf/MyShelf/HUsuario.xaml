@@ -7,19 +7,16 @@
         mc:Ignorable="d"
         Title="HUsuario" Height="450" Width="800">
     <Grid>
-        <TextBox Name="txtpes" HorizontalAlignment="Left" Height="24" Margin="578,46,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="165" FontSize="15
-                 "/>
+        <TextBox Name="txtpes" HorizontalAlignment="Left" Height="24" Margin="578,46,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="165" FontSize="15"/>
         <Button Content="🔎" HorizontalAlignment="Left" Height="24" Margin="748,46,0,0" VerticalAlignment="Top" Width="40" Click="pesq"/>
         <Button Content="Estante📚 " HorizontalAlignment="Left" Height="58" Margin="303,286,0,0" FontSize="25
                 " VerticalAlignment="Top" Width="214" Click="Est"/>
         <TextBlock HorizontalAlignment="Left" Margin="34,147,0,166" TextAlignment="Center" TextWrapping="Wrap" Text="Bem vindo ao MyShelf" FontSize="50" Width="732"/>
         <Menu x:Name="menu" Height="41" VerticalAlignment="Top">
-            <MenuItem Name="n" Header="Leitor" Height="41" Width="80" FontSize="20">
+            <MenuItem x:Name="n" Header="Leitor" Height="41" Width="80" FontSize="20">
                 <MenuItem Header="Editar informações"/>
             </MenuItem>
         </Menu>
-
-
-
+        <Image Name="img" HorizontalAlignment="Left" Height="101" Margin="10,46,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.49,0.494"/>
     </Grid>
 </Window>

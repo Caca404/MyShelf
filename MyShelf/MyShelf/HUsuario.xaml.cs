@@ -1,6 +1,8 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,6 +28,17 @@ namespace MyShelf
             InitializeComponent();
             this.u = u;
             n.Header = u.Nome;
+
+            OpenFileDialog w = new OpenFileDialog();
+            w.Filter = "Arquivos Jpg|*.jpg";
+                byte[] b = Convert.FromBase64String(u.foto);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+
+                img.Source = bi;
         }
 
         private void pesq(object sender, RoutedEventArgs e)

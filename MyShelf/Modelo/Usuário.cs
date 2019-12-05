@@ -16,6 +16,7 @@ namespace Modelo
         public DateTime Data { get; set; }
         public string Senha { get; set; }
         public int Tipo { get; set; }
+        public string foto { get; set; }
         public List <Livro> lendo { get; set; }
         public List<Livro> fav { get; set; }
         public List<Livro> ql { get; set; }

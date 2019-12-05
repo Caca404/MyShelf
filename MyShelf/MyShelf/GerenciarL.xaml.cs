@@ -30,7 +30,6 @@ namespace MyShelf
 
         private void Pesq(object sender, RoutedEventArgs e)
         {
-            
             livros.ItemsSource = l.Pesquisar(pes.Text);
         }
 

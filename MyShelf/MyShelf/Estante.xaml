@@ -7,16 +7,14 @@
         mc:Ignorable="d"
         Title="Estante" Height="421.414" Width="578.689">
     <Grid>
-        <ListBox Name="est" HorizontalAlignment="Left" Height="287" Margin="32,61,0,0" VerticalAlignment="Top" Width="505" SelectionChanged="Est_SelectionChanged"/>
-        <ComboBox FontSize="15" Margin="32,10,463,364">
-            <ComboBoxItem>Quero Ler</ComboBoxItem>
-            <ComboBoxItem>Já Li</ComboBoxItem>
-            <ComboBoxItem>Lendo</ComboBoxItem>
-            <ComboBoxItem>Favoritos</ComboBoxItem>
-            <ComboBoxItem IsSelected="True">Todos</ComboBoxItem>
+        <ListBox Name="est" HorizontalAlignment="Left" Height="287" Margin="32,61,0,0" VerticalAlignment="Top" Width="505"/>
+        <ComboBox FontSize="15" Margin="32,10,463,350">
+            <ComboBoxItem Selected="QroLe">Quero Ler</ComboBoxItem>
+            <ComboBoxItem Selected="Jali">Já Li</ComboBoxItem>
+            <ComboBoxItem Selected="Lendo">Lendo</ComboBoxItem>
+            <ComboBoxItem Selected="Favoritos">Favoritos</ComboBoxItem>
+            <ComboBoxItem IsSelected="True" Selected="todos">Todos</ComboBoxItem>
         </ComboBox>
-
-
-
+        <Button Content="Excluir" HorizontalAlignment="Left" Height="27" Margin="455,353,0,0" VerticalAlignment="Top" Width="82" Click="ex"/>
     </Grid>
 </Window>
