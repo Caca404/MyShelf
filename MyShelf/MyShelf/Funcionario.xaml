@@ -9,8 +9,8 @@
         Title="funcionario" Height="366.783" Width="487.887">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Height="106" Margin="111,122,0,0" TextWrapping="Wrap" FontSize="50" VerticalAlignment="Top" Width="318"><Run Text="MyShelf"/><Run FontSize="70" Text="📚"/></TextBlock>
-        <Menu Name="Mnf" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="480">
-            <MenuItem Header="Menu" FontSize="20" Height="40" Width="120">
+        <Menu Name="Mnf" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="602">
+            <MenuItem Header="Menu" FontSize="20" Height="40" Width="120" >
                 <MenuItem Header="Gerenciar Usuários" Click="GU"/>
                 <MenuItem Header="Gerenciar Livros" Click="GL"/>
             </MenuItem>

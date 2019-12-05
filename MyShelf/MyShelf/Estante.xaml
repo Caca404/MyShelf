@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Estante" Height="421.414" Width="578.689">
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="328" Margin="32,20,0,0" VerticalAlignment="Top" Width="505"/>
-        <ComboBox SelectionChanged="ComboBox_SelectionChanged" FontSize="15" Margin="46,32,449,342">
+        <ListBox Name="est" HorizontalAlignment="Left" Height="287" Margin="32,61,0,0" VerticalAlignment="Top" Width="505" SelectionChanged="Est_SelectionChanged"/>
+        <ComboBox FontSize="15" Margin="32,10,463,364">
             <ComboBoxItem>Quero Ler</ComboBoxItem>
             <ComboBoxItem>Já Li</ComboBoxItem>
             <ComboBoxItem>Lendo</ComboBoxItem>
             <ComboBoxItem>Favoritos</ComboBoxItem>
-            <ComboBoxItem>Todos</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Todos</ComboBoxItem>
         </ComboBox>
 
 

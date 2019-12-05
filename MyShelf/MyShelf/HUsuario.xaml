@@ -11,7 +11,7 @@
                  "/>
         <Button Content="🔎" HorizontalAlignment="Left" Height="24" Margin="748,46,0,0" VerticalAlignment="Top" Width="40" Click="pesq"/>
         <Button Content="Estante📚 " HorizontalAlignment="Left" Height="58" Margin="303,286,0,0" FontSize="25
-                " VerticalAlignment="Top" Width="214"/>
+                " VerticalAlignment="Top" Width="214" Click="Est"/>
         <TextBlock HorizontalAlignment="Left" Margin="34,147,0,166" TextAlignment="Center" TextWrapping="Wrap" Text="Bem vindo ao MyShelf" FontSize="50" Width="732"/>
         <Menu x:Name="menu" Height="41" VerticalAlignment="Top">
             <MenuItem Name="n" Header="Leitor" Height="41" Width="80" FontSize="20">

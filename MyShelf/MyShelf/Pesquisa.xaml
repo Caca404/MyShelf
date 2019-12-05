@@ -7,20 +7,19 @@
         mc:Ignorable="d"
         Title="Pesquisa" Height="497" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="581,43,0,0" TextWrapping="Wrap" Text="Pesquisar" VerticalAlignment="Top" Width="148"/>
-        <Button Content="🔎" HorizontalAlignment="Left" Height="22" Margin="734,43,0,0" VerticalAlignment="Top" Width="28"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="581,43,0,0" TextWrapping="Wrap" Text="Pesquisar 📖" VerticalAlignment="Top" Width="148" Name="txtpes"/>
+        <Button Content="🔎" HorizontalAlignment="Left" Height="22" Margin="734,43,0,0" VerticalAlignment="Top" Width="28" Click="Pesq"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="51,125,0,0" TextWrapping="Wrap" Text="Livros encontrados:" FontSize="20" VerticalAlignment="Top" Width="208"/>
-        <Button Content="Home" HorizontalAlignment="Left" Height="24" FontSize="15" Margin="51,20,0,0" VerticalAlignment="Top" Width="103"/>
         <TextBlock HorizontalAlignment="Left" Margin="51,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="617"><Run Text="Legenda "/><LineBreak/><Run Text="F: Favoritos     QL: Quero ler     L: Lendo     JL: Já Lidos"/></TextBlock>
         <DataGrid x:Name="grid" HorizontalAlignment="Left" Height="222" Margin="51,177,0,0" VerticalAlignment="Top" Width="711">
             <DataGrid.Columns >
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Ler" HorizontalAlignment="Left" Height="29" Margin="51,415,0,0" VerticalAlignment="Top" Width="123"/>
-        <Button Content="Lendo" HorizontalAlignment="Left" Height="29" Margin="203,415,0,0" VerticalAlignment="Top" Width="123"/>
-        <Button Content="Favoritos" HorizontalAlignment="Left" Height="29" Margin="350,415,0,0" VerticalAlignment="Top" Width="122"/>
-        <Button Content="Quero Ler" HorizontalAlignment="Left" Height="29" Margin="495,415,0,0" VerticalAlignment="Top" Width="123"/>
-        <Button Content="Já Li" HorizontalAlignment="Left" Height="29" Margin="638,415,0,0" VerticalAlignment="Top" Width="123"/>
+       
+        <Button Content="Lendo" HorizontalAlignment="Left" Height="29" Margin="51,415,0,0" VerticalAlignment="Top" Width="123" Click="Lendo"/>
+        <Button Content="Favoritos" HorizontalAlignment="Left" Height="29" Margin="241,415,0,0" VerticalAlignment="Top" Width="122" Click="Favoritos"/>
+        <Button Content="Quero Ler" HorizontalAlignment="Left" Height="29" Margin="433,415,0,0" VerticalAlignment="Top" Width="123" Click="QueroLer"/>
+        <Button Content="Já Li" HorizontalAlignment="Left" Height="29" Margin="639,415,0,0" VerticalAlignment="Top" Width="123" Click="JaLi"/>
 
     </Grid>
 </Window>

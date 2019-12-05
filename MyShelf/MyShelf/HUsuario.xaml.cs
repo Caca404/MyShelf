@@ -20,16 +20,24 @@ namespace MyShelf
     /// </summary>
     public partial class HUsuario : Window
     {
+        Usuário u = new Usuário();
         public HUsuario(Usuário u)
         {
             InitializeComponent();
+            this.u = u;
             n.Header = u.Nome;
         }
 
         private void pesq(object sender, RoutedEventArgs e)
         {
-            Pesquisa p = new Pesquisa(txtpes.Text);
+            Pesquisa p = new Pesquisa(txtpes.Text, u);
             p.ShowDialog();
+        }
+
+        private void Est(object sender, RoutedEventArgs e)
+        {
+            Estante es = new Estante(u);
+            es.ShowDialog();
         }
     }
 }

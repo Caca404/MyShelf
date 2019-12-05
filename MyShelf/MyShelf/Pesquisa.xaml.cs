@@ -21,12 +21,47 @@ namespace MyShelf
     /// </summary>
     public partial class Pesquisa : Window
     {
+        Usuário i = new Usuário();
+        NUsuário u = new NUsuário();
         NLivro n = new NLivro();
-        public Pesquisa(string no)
+        public Pesquisa(string no, Usuário u)
         {
             InitializeComponent();
             grid.ItemsSource = n.Pesquisar(no);
+            i = u; 
         }
 
+        private void Pesq(object sender, RoutedEventArgs e)
+        {
+            Pesquisa p = new Pesquisa(txtpes.Text, i);
+            Close();
+            p.ShowDialog();
+            
+        }
+
+        private void Lendo(object sender, RoutedEventArgs e)
+        {
+            i.lendo.Add(grid.SelectedItem as Livro);
+            i.todos.Add(grid.SelectedItem as Livro);
+        }
+
+        private void Favoritos(object sender, RoutedEventArgs e)
+        {
+            i.fav.Add(grid.SelectedItem as Livro);
+            i.todos.Add(grid.SelectedItem as Livro);
+
+        }
+
+        private void QueroLer(object sender, RoutedEventArgs e)
+        {
+            i.ql.Add(grid.SelectedItem as Livro);
+            i.todos.Add(grid.SelectedItem as Livro);
+        }
+
+        private void JaLi(object sender, RoutedEventArgs e)
+        {
+            i.jl.Add(grid.SelectedItem as Livro);
+            i.todos.Add(grid.SelectedItem as Livro);
+        }
     }
 }

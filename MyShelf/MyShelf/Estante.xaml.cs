@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Modelo;
 
 namespace MyShelf
 {
@@ -19,19 +20,14 @@ namespace MyShelf
     /// </summary>
     public partial class Estante : Window
     {
-        public Estante()
+        Usuário u = new Usuário();
+        public Estante(Usuário u)
         {
             InitializeComponent();
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            this.u = u;
+            List<Livro> l = new List<Livro>();
+            Livro[] i = u.lendo.ToArray(); 
+            est.ItemsSource = (u.lendo + u.jl);
         }
     }
 }
