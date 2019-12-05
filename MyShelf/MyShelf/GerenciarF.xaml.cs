@@ -1,6 +1,8 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,30 +31,72 @@ namespace MyShelf
         }
         private void Adicionar(object sender, RoutedEventArgs e)
         {
-            Window n = new AddF();
-            if (n.ShowDialog().Value)
+            try
             {
-                f.Adicionar((n as AddF).GetFuncionario());
-                funcionarios.ItemsSource = f.Listar();
+                Window n = new AddF();
+                if (n.ShowDialog().Value)
+                {
+                    f.Adicionar((n as AddF).GetFuncionario());
+                    funcionarios.ItemsSource = f.Listar();
+                }
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Formato inválido");
+            }
+            catch(Exception k)
+            {
+                MessageBox.Show(k.Message);
             }
         }
 
         private void Excluir(object sender, RoutedEventArgs e)
         {
-            if (funcionarios.SelectedItem != null)
+            try
             {
-                f.Excluir((funcionarios.SelectedItem) as Usuário);
+                f.Excluir((funcionarios.SelectedItem) as Funcionario);
                 funcionarios.ItemsSource = f.Listar();
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Nenhum Funcionário foi selecionado");
             }
         }
 
         private void Atualizar(object sender, RoutedEventArgs e)
         {
-            Window n = new AttF(funcionarios.SelectedItem as Usuário);
-            if (n.ShowDialog().Value)
+            try
             {
-                f.Atualizar((n as AttF).GetFuncionario());
-                funcionarios.ItemsSource = f.Listar();
+                Window n = new AttF(funcionarios.SelectedItem as Funcionario);
+                if (n.ShowDialog().Value)
+                {
+                    f.Atualizar((n as AttF).GetFuncionario());
+                    funcionarios.ItemsSource = f.Listar();
+                }
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Nenhum Funcionário foi selecionado");
+            }
+            catch(Exception k)
+            {
+                MessageBox.Show(k.Message);
+            }
+        }
+
+        private void Funcionarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(funcionarios.SelectedItem != null)
+            {
+                Funcionario fu = funcionarios.SelectedItem as Funcionario;
+                byte[] b = Convert.FromBase64String(fu.foto);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+
+                img.Source = bi;
             }
         }
     }

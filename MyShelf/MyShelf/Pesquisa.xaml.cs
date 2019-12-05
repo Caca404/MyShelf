@@ -28,17 +28,13 @@ namespace MyShelf
         {
             InitializeComponent();
             grid.ItemsSource = n.Pesquisar(no);
-            i = u; 
+            i = u;
         }
-
         private void Pesq(object sender, RoutedEventArgs e)
         {
-            Pesquisa p = new Pesquisa(txtpes.Text, i);
-            Close();
-            p.ShowDialog();
-            
-        }
+            grid.ItemsSource = n.Pesquisar(txtpes.Text);
 
+        }
         private void Lendo(object sender, RoutedEventArgs e)
         {
             i.lendo.Add(grid.SelectedItem as Livro);

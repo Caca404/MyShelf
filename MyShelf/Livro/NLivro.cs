@@ -14,17 +14,11 @@ namespace Negocio
         private List<Livro> ls;
         public List<Livro> Pesquisar(string nome)
         {
-            
             List<Livro> cs = p.Open().OrderBy(c => c.Nome).ToList();
             List<Livro> r = new List<Livro>();
             foreach (Livro c in cs)
-                if (c.Nome.StartsWith(nome)) r.Add(c);
-                if (r == null)
-                {
-                 foreach (Livro c in cs)
-                 if (c.Autor.StartsWith(nome)) r.Add(c);
-                }
-                return r;
+                if (c.Nome.ToUpper().StartsWith(nome.ToUpper())) r.Add(c);
+            return r;
         }
         public List<Livro> Listar()
         {

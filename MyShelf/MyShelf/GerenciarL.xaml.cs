@@ -35,30 +35,52 @@ namespace MyShelf
 
         private void newa(object sender, RoutedEventArgs e)
         {
-            Window n = new AddL();
-            if (n.ShowDialog().Value)
+            try
             {
-                l.Add((n as AddL).GetLivro());
-                livros.ItemsSource = l.Listar();
+                Window n = new AddL();
+                if (n.ShowDialog().Value)
+                {
+                    l.Add((n as AddL).GetLivro());
+                    livros.ItemsSource = l.Listar();
+                }
+            }
+            catch(Exception k)
+            {
+                MessageBox.Show(k.Message);
             }
         }
 
         private void del(object sender, RoutedEventArgs e)
         {
-            if (livros.SelectedItem != null)
+            try
             {
                 l.Delete((livros.SelectedItem) as Livro);
                 livros.ItemsSource = l.Listar();
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Nenhum Livro foi selecionado");
             }
         }
 
         private void att(object sender, RoutedEventArgs e)
         {
-            Window n = new AttL(livros.SelectedItem as Livro);
-            if (n.ShowDialog().Value)
+            try
             {
-                l.Update((n as AttL).GetLivro());
-                livros.ItemsSource = l.Listar();
+                Window n = new AttL(livros.SelectedItem as Livro);
+                if (n.ShowDialog().Value)
+                {
+                    l.Update((n as AttL).GetLivro());
+                    livros.ItemsSource = l.Listar();
+                }
+            }
+            catch(ArgumentNullException)
+            {
+                MessageBox.Show("Nenhum Livro foi selecionado");
+            }
+            catch(Exception h)
+            {
+                MessageBox.Show(h.Message);
             }
         }
     }

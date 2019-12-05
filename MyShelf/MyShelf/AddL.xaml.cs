@@ -36,11 +36,23 @@ namespace MyShelf
         public Livro GetLivro()
         {
             Livro l = new Livro();
-            l.Nome = n.Text;
-            l.ISBN = i.Text;
-            l.Autor = a.Text;
-            l.Ano = int.Parse(ano.Text);
-            l.Genero = g.Text;
+            bool test = true;
+            do
+            {
+                try
+                {
+
+                    l.Nome = n.Text;
+                    l.ISBN = i.Text;
+                    l.Autor = a.Text;
+                    l.Ano = int.Parse(ano.Text);
+                    l.Genero = g.Text;
+                }
+                catch (Exception k)
+                {
+                    MessageBox.Show(k.Message);
+                }
+            } while (test);
             return l;
         }
     }

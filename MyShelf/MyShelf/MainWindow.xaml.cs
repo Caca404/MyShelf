@@ -70,7 +70,7 @@ namespace MyShelf
             if (r == false)
             {
                 NFuncionario f = new NFuncionario();
-                List<Usuário> a = f.Listar();
+                List<Funcionario> a = f.Listar();
                 foreach (Usuário x in a)
                 {
                     if (x.Email == n && s == x.Senha)

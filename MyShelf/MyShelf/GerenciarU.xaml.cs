@@ -1,6 +1,8 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,11 +32,32 @@ namespace MyShelf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(grid.SelectedItem != null)
+            try
             {
                 Usuário x = grid.SelectedItem as Usuário;
                 n.Excluir(x);
                 grid.ItemsSource = n.Listar();
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Nenhum Usuário foi selecionado");
+            }
+        }
+
+        private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (grid.SelectedItem != null)
+            {
+                OpenFileDialog w = new OpenFileDialog();
+                w.Filter = "Arquivos Jpg|*.jpg";
+                byte[] b = Convert.FromBase64String((grid.SelectedItem as Usuário).foto);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+
+                img.Source = bi;
             }
         }
     }

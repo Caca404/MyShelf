@@ -12,25 +12,25 @@ namespace Persistencia
     public class PFuncionario
     {
         private string arquivo = "Funcionarios.xml";
-        public List<Usuário> Open()
+        public List<Funcionario> Open()
         {
-            XmlSerializer x = new XmlSerializer(typeof(List<Usuário>));
+            XmlSerializer x = new XmlSerializer(typeof(List<Funcionario>));
             StreamReader f = null;
-            List<Usuário> cs = null;
+            List<Funcionario> cs = null;
             try
             {
                 f = new StreamReader(arquivo, Encoding.Default);
-                cs = x.Deserialize(f) as List<Usuário>;
+                cs = x.Deserialize(f) as List<Funcionario>;
             }
-            catch { cs = new List<Usuário>(); }
+            catch { cs = new List<Funcionario>(); }
 
             finally { if (f != null) f.Close(); }
 
             return cs;
         }
-        public void Save(List<Usuário> cs)
+        public void Save(List<Funcionario> cs)
         {
-            XmlSerializer x = new XmlSerializer(typeof(List<Usuário>));
+            XmlSerializer x = new XmlSerializer(typeof(List<Funcionario>));
             StreamWriter f = new StreamWriter(arquivo, false, Encoding.Default);
             x.Serialize(f, cs);
             f.Close();

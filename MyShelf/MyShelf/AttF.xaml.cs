@@ -1,6 +1,8 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,7 +22,8 @@ namespace MyShelf
     /// </summary>
     public partial class AttF : Window
     {
-        public AttF(Usuário x)
+        private string foto = string.Empty;
+        public AttF(Funcionario x)
         {
             InitializeComponent();
             f = x;
@@ -28,8 +31,19 @@ namespace MyShelf
             ano.Text = x.Data.ToString();
             e.Text = x.Email;
             tel.Text = x.Telefone;
+
+            OpenFileDialog w = new OpenFileDialog();
+            w.Filter = "Arquivos Jpg|*.jpg";
+            byte[] b = Convert.FromBase64String(x.foto);
+
+            BitmapImage bi = new BitmapImage();
+            bi.BeginInit();
+            bi.StreamSource = new MemoryStream(b);
+            bi.EndInit();
+
+            img.Source = bi;
         }
-        private Usuário f;
+        private Funcionario f;
         private void ad(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
@@ -39,15 +53,34 @@ namespace MyShelf
         {
             DialogResult = false;
         }
-        public Usuário GetFuncionario()
+        public Funcionario GetFuncionario()
         {
-            Usuário l = new Usuário();
+            Funcionario l = new Funcionario();
             l = f;
             l.Nome = n.Text;
             l.Telefone = tel.Text;
             l.Data = DateTime.Parse(ano.Text);
             l.Email = e.Text;
+            l.foto = foto;
             return l;
+        }
+
+        private void attf(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog w = new OpenFileDialog();
+            w.Filter = "Arquivos Jpg|*.jpg";
+            if (w.ShowDialog().Value)
+            {
+                byte[] b = File.ReadAllBytes(w.FileName);
+                foto = Convert.ToBase64String(b);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+
+                img.Source = bi;
+            }
         }
     }
 }
