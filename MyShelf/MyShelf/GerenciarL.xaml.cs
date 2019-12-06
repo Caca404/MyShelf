@@ -35,18 +35,12 @@ namespace MyShelf
 
         private void newa(object sender, RoutedEventArgs e)
         {
-            try
+            AddL n = new AddL();
+            if (n.ShowDialog().Value)
             {
-                Window n = new AddL();
-                if (n.ShowDialog().Value)
-                {
-                    l.Add((n as AddL).GetLivro());
-                    livros.ItemsSource = l.Listar();
-                }
-            }
-            catch(Exception k)
-            {
-                MessageBox.Show(k.Message);
+                MessageBox.Show("Erro1");
+                l.Adicionar(n.GetLivro());
+                livros.ItemsSource = l.Listar();
             }
         }
 

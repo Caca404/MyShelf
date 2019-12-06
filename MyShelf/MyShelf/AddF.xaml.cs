@@ -39,8 +39,6 @@ namespace MyShelf
         {
             bool test = true;
             Funcionario u = new Funcionario();
-            do
-            {
                 try
                 {
                     u.Email = e.Text;
@@ -49,14 +47,14 @@ namespace MyShelf
                     u.foto = foto;
                     u.Telefone = tel.Text;
                     u.Data = DateTime.Parse(ano.Text);
-                    break;
+                    return u;
                 }
                 catch (Exception k)
                 {
                     MessageBox.Show(k.Message);
+                    return null;
                 }
-            } while (test);
-            return u;
+            
         }
 
         private void img(object sender, RoutedEventArgs e)

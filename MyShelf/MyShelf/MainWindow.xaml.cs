@@ -43,19 +43,19 @@ namespace MyShelf
                 {
                     Window janela = new Adm();
                     Close();
-                    janela.ShowDialog();
+                    janela.Show();
                 }
                 else if (i == 1)
                 {
                     Window janela = new funcionario();
                     Close();
-                    janela.ShowDialog();
+                    janela.Show();
                 }
                 else if (i == 2)
                 {
                     Window janela = new HUsuario(u);
                     Close();
-                    janela.ShowDialog();
+                    janela.Show();
                 }
             }
         }

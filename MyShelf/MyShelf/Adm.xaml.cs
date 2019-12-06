@@ -40,13 +40,13 @@ namespace MyShelf
 
         private void GL(object sender, RoutedEventArgs e)
         {
-            Window a = new GerenciarL();
+            GerenciarL a = new GerenciarL();
             a.ShowDialog();
         }
         private void log(object sender, RoutedEventArgs e)
         {
             MainWindow a = new MainWindow();
-            a.ShowDialog();
+            a.Show();
             Close();
         }
     }

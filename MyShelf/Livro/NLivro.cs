@@ -38,7 +38,7 @@ namespace Negocio
                 }
             p.Save(cs);
         }
-        public void Add(Livro l)
+        public void Adicionar(Livro l)
         {
             PLivro p = new PLivro();
             ls = p.Open();
