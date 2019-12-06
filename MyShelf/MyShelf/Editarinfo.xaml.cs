@@ -18,35 +18,39 @@ using Modelo;
 namespace MyShelf
 {
     /// <summary>
-    /// Lógica interna para AttF.xaml
+    /// Lógica interna para Editarinfo.xaml
     /// </summary>
-    public partial class AttF : Window
+    public partial class Editarinfo : Window
     {
-        private string foto = string.Empty;
-        public AttF(Funcionario x)
+        Usuário u = new Usuário();
+        private string foto = String.Empty;
+        public Editarinfo(Usuário u)
         {
             InitializeComponent();
-            f = x;
-            n.Text = x.Nome;
-            ano.Text = x.Data.ToString();
-            e.Text = x.Email;
-            tel.Text = x.Telefone;
-            if (x.foto != null)
+            txtn.Text = u.Nome;
+            txte.Text = u.Email;
+            string h = u.Senha;
+            string te = "";
+            foreach (char pl in h)
             {
-                OpenFileDialog w = new OpenFileDialog();
-                w.Filter = "Arquivos Jpg|*.jpg";
-                byte[] b = Convert.FromBase64String(x.foto);
-
+                int v = pl;
+                v -= 10;
+                te += Convert.ToChar(v);
+            }
+            txts.Text = te;
+            if (u.foto != null)
+            {
+                byte[] b = Convert.FromBase64String(u.foto);
                 BitmapImage bi = new BitmapImage();
                 bi.BeginInit();
                 bi.StreamSource = new MemoryStream(b);
                 bi.EndInit();
-
                 img.Source = bi;
             }
+            this.u = u;
         }
-        private Funcionario f;
-        private void ad(object sender, RoutedEventArgs e)
+
+        private void att(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
         }
@@ -55,19 +59,25 @@ namespace MyShelf
         {
             DialogResult = false;
         }
-        public Funcionario GetFuncionario()
+
+        public Usuário GetUsuário()
         {
-            Funcionario l = new Funcionario();
-            l = f;
-            l.Nome = n.Text;
-            l.Telefone = tel.Text;
-            l.Data = DateTime.Parse(ano.Text);
-            l.Email = e.Text;
-            l.foto = foto;
-            return l;
+            u.Nome = txtn.Text;
+            string te = "";
+            foreach (char x in txts.Text)
+            {
+                int v = x;
+                v += 10;
+                te += Convert.ToChar(v);
+            }
+            u.Senha = te;
+            u.Senha = txts.Text;
+            u.Email = txte.Text;
+            u.foto = foto;
+            return u;
         }
 
-        private void attf(object sender, RoutedEventArgs e)
+        private void ft(object sender, RoutedEventArgs e)
         {
             OpenFileDialog w = new OpenFileDialog();
             w.Filter = "Arquivos Jpg|*.jpg";

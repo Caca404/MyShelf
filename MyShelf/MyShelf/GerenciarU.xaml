@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="GerenciarU" Height="388.662" Width="482.098">
+        Title="GerenciarU" Height="293.946" Width="433.107">
     <Grid Margin="0,0,2,3">
 
         <GroupBox Header="Gerenciar Usuários" HorizontalAlignment="Left" Height="335" Margin="10,10,0,0" VerticalAlignment="Top" Width="452">
@@ -13,9 +13,8 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <ListBox Name="grid" HorizontalAlignment="Left" Height="166" Margin="44,138,0,0" VerticalAlignment="Top" Width="360" SelectionChanged="Grid_SelectionChanged"/>
-                <Button Content="Banir" HorizontalAlignment="Left" Height="31" Margin="175,309,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click"/>
-                <Image Name="img" HorizontalAlignment="Left" Height="91" Margin="44,42,0,0" VerticalAlignment="Top" Width="93"/>
+                <ListBox Name="grid" HorizontalAlignment="Left" Height="166" Margin="37,47,0,0" VerticalAlignment="Top" Width="360"/>
+                <Button Content="Banir" HorizontalAlignment="Left" Height="31" Margin="168,218,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click"/>
 
             </Grid>
         </GroupBox>

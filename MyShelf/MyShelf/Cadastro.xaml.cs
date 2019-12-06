@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,6 +36,14 @@ namespace MyShelf
             a.Nome = user.Text;
             a.Email = em.Text;
             a.Senha = sen.Password;
+            string te = "";
+            foreach(char x in a.Senha)
+            {
+                int v = x;
+                v += 10;
+                te += Convert.ToChar(v);
+            }
+            a.Senha = te;
             a.Tipo = 2;
             a.foto = foto;
             NUsuário f = new NUsuário();

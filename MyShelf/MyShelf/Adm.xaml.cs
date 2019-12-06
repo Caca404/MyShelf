@@ -43,10 +43,11 @@ namespace MyShelf
             Window a = new GerenciarL();
             a.ShowDialog();
         }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void log(object sender, RoutedEventArgs e)
         {
-
+            MainWindow a = new MainWindow();
+            a.ShowDialog();
+            Close();
         }
     }
 }

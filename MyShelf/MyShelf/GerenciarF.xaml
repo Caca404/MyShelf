@@ -9,11 +9,10 @@
     <Grid>
         <GroupBox Header="Gerenciar Funcionários" HorizontalAlignment="Left" Height="335" VerticalAlignment="Top" Width="502" Margin="10,8,0,0">
             <Grid Margin="0,0,-2,-39">
-                <ListBox Name="funcionarios" HorizontalAlignment="Left" Height="165" Margin="10,97,0,0" VerticalAlignment="Top" Width="472" SelectionChanged="Funcionarios_SelectionChanged"/>
+                <ListBox Name="funcionarios" HorizontalAlignment="Left" Height="252" Margin="10,10,0,0" VerticalAlignment="Top" Width="472"/>
                 <Button Content="Adicionar" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Width="132" Height="31" Click="Adicionar"/>
                 <Button Content="Excluir" HorizontalAlignment="Left" Margin="182,274,0,0" VerticalAlignment="Top" Width="133" Height="31" Click="Excluir"/>
                 <Button Content="Atualizar" HorizontalAlignment="Left" Margin="350,274,0,0" VerticalAlignment="Top" Width="132" Height="31" Click="Atualizar"/>
-                <Image Name="img" HorizontalAlignment="Left" Height="82" Margin="10,10,0,0" VerticalAlignment="Top" Width="88"/>
             </Grid>
         </GroupBox>
 

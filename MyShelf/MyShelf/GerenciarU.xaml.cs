@@ -43,22 +43,5 @@ namespace MyShelf
                 MessageBox.Show("Nenhum Usuário foi selecionado");
             }
         }
-
-        private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (grid.SelectedItem != null)
-            {
-                OpenFileDialog w = new OpenFileDialog();
-                w.Filter = "Arquivos Jpg|*.jpg";
-                byte[] b = Convert.FromBase64String((grid.SelectedItem as Usuário).foto);
-
-                BitmapImage bi = new BitmapImage();
-                bi.BeginInit();
-                bi.StreamSource = new MemoryStream(b);
-                bi.EndInit();
-
-                img.Source = bi;
-            }
-        }
     }
 }

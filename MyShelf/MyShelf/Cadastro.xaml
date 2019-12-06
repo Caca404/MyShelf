@@ -12,12 +12,12 @@
         </Grid.ColumnDefinitions>
         <TextBox Name="user" HorizontalAlignment="Left" Height="44" Margin="27,147,0,0" TextWrapping="Wrap" Text="Nome de usario" VerticalAlignment="Top" Width="389"/>
         <TextBox Name="em" HorizontalAlignment="Left" Height="44" Margin="27,203,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="389"/>
-        <PasswordBox Name="sen" Margin="27,256,23,114" />
+        <PasswordBox Name="sen" Margin="27,281,23,133" />
         <Button Content="Cadastrar" HorizontalAlignment="Left" Height="42" Margin="111,389,0,0" VerticalAlignment="Top" Width="214" Click="Cads"/>
         <Button Content="Inserir Imagem" HorizontalAlignment="Left" Margin="155,351,0,0" VerticalAlignment="Top" Width="125" Height="29" Click="ft"/>
         <TextBlock Text="Cadastro do Usuário" FontSize="18" HorizontalAlignment="Left" Margin="127,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="182"/>
-        <TextBlock HorizontalAlignment="Left" Margin="31,271,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
-        <Image Name="imagem" HorizontalAlignment="Left" Height="77" Margin="27,58,0,0" VerticalAlignment="Top" Width="73"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27,260,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
+        <Image Name="imagem" HorizontalAlignment="Left" Height="122" Margin="10,10,0,0" VerticalAlignment="Top" Width="112"/>
 
     </Grid>
 </Window>

@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Modelo;
+using Negocio;
 
 namespace MyShelf
 {
@@ -23,34 +24,39 @@ namespace MyShelf
     public partial class HUsuario : Window
     {
         Usuário u = new Usuário();
+        NUsuário d = new NUsuário();
         public HUsuario(Usuário u)
         {
             InitializeComponent();
             this.u = u;
             n.Header = u.Nome;
-
-            OpenFileDialog w = new OpenFileDialog();
-            w.Filter = "Arquivos Jpg|*.jpg";
-                byte[] b = Convert.FromBase64String(u.foto);
-
-                BitmapImage bi = new BitmapImage();
-                bi.BeginInit();
-                bi.StreamSource = new MemoryStream(b);
-                bi.EndInit();
-
-                img.Source = bi;
         }
-
         private void pesq(object sender, RoutedEventArgs e)
         {
             Pesquisa p = new Pesquisa(txtpes.Text, u);
             p.ShowDialog();
         }
-
         private void Est(object sender, RoutedEventArgs e)
         {
             Estante es = new Estante(u);
             es.ShowDialog();
+        }
+        private void Att(object sender, RoutedEventArgs e)
+        {
+            NUsuário x = new NUsuário();
+            Editarinfo p = new Editarinfo(u);
+            if (p.ShowDialog().Value)
+            {
+                d.Atualizar(p.GetUsuário());
+                n.Header = u.Nome;
+            }
+        }
+
+        private void off(object sender, RoutedEventArgs e)
+        {
+            MainWindow a = new MainWindow();
+            a.ShowDialog();
+            Close();
         }
     }
 }

@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Editarinfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Estante.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +125,9 @@
     </Compile>
     <Compile Include="AttL.xaml.cs">
       <DependentUpon>AttL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editarinfo.xaml.cs">
+      <DependentUpon>Editarinfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Estante.xaml.cs">
       <DependentUpon>Estante.xaml</DependentUpon>

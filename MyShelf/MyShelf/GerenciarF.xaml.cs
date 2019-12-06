@@ -83,21 +83,5 @@ namespace MyShelf
                 MessageBox.Show(k.Message);
             }
         }
-
-        private void Funcionarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if(funcionarios.SelectedItem != null)
-            {
-                Funcionario fu = funcionarios.SelectedItem as Funcionario;
-                byte[] b = Convert.FromBase64String(fu.foto);
-
-                BitmapImage bi = new BitmapImage();
-                bi.BeginInit();
-                bi.StreamSource = new MemoryStream(b);
-                bi.EndInit();
-
-                img.Source = bi;
-            }
-        }
     }
 }
