@@ -37,24 +37,22 @@ namespace MyShelf
         }
         public Funcionario GetFuncionario()
         {
-            bool test = true;
             Funcionario u = new Funcionario();
-                try
-                {
-                    u.Email = e.Text;
-                    u.Nome = n.Text;
-                    u.Tipo = 1;
-                    u.foto = foto;
-                    u.Telefone = tel.Text;
-                    u.Data = DateTime.Parse(ano.Text);
-                    return u;
-                }
-                catch (Exception k)
-                {
-                    MessageBox.Show(k.Message);
-                    return null;
-                }
-            
+            DateTime d;
+            try
+            {
+                u.Email = e.Text;
+                u.Nome = n.Text;
+                u.Tipo = 1;
+                u.foto = foto;
+                u.Telefone = tel.Text;
+                u.Data = ano.DisplayDate;
+            }
+            catch (Exception k)
+            {
+                throw k;
+            }
+            return u;
         }
 
         private void img(object sender, RoutedEventArgs e)

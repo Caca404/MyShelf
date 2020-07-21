@@ -8,16 +8,16 @@ namespace Modelo
 {
     public class Funcionario : Usuário
     {
+        private DateTime _Data;
         public string Matricula { get; set; }
         public string Telefone { get; set; }
-        public DateTime Data {
-            get { return Data; }
+        public DateTime Data { 
+            get => _Data;
             set
             {
-                DateTime a = new DateTime();
-                a = DateTime.Now;
-                if (value.Date > a) throw new Exception("Data é muito do futuro");
-                else Data = value;
+                DateTime a = DateTime.Now;
+                if (a < value) throw new Exception("Data é do futuro");
+                else _Data = value;
             }
         }
         public Funcionario() : base() { }

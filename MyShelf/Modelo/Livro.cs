@@ -23,7 +23,8 @@ namespace Modelo
         public string Autor { get; set; }
         public string Genero { get; set; }
         public string ISBN { get; set; }
-        public int Ano { get;
+        public int Ano {
+            get => Ano;
             set
             {
                 int a = DateTime.Now.Year;

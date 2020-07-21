@@ -21,9 +21,7 @@ namespace Negocio
         {
             PFuncionario p = new PFuncionario();
             ls = p.Open();
-            int m = 0;
-            foreach (Funcionario x in ls) if (x.Id > m) m = x.Id;
-            f.Id = m + 1;
+            f.Id = ls.Count;
             f.Matricula = f.Id.ToString() + "2019" + f.Tipo.ToString();
             f.Senha = f.Matricula;
             ls.Add(f);

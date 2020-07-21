@@ -42,11 +42,12 @@ namespace MyShelf
             {
                 try
                 {
-                    f.Adicionar((n as AddF).GetFuncionario());
+                    Funcionario l = (n as AddF).GetFuncionario();
+                    f.Adicionar(l);
                 }
-                catch (FormatException)
+                catch (Exception k)
                 {
-                    MessageBox.Show("Data errada");
+                    MessageBox.Show(k.Message);
                     no_errors = false;
                 }
                 if (no_errors)
@@ -68,8 +69,7 @@ namespace MyShelf
 
         private void Excluir(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            if (funcionarios.SelectedItem != null) {
                 f.Excluir((funcionarios.SelectedItem) as Funcionario);
                 funcionarios.ItemsSource = f.Listar();
                 if (funcionarios.Items.Count == 0)
@@ -89,7 +89,7 @@ namespace MyShelf
         {
             if (funcionarios.SelectedItem != null)
             {
-                Window n = new AttF(funcionarios.SelectedItem as Usuário);
+                Window n = new AttF(funcionarios.SelectedItem as Funcionario);
                 if (n.ShowDialog().Value)
                 {
                     f.Atualizar((n as AttF).GetFuncionario());
