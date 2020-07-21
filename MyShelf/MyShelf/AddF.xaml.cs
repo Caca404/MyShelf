@@ -35,12 +35,19 @@ namespace MyShelf
         public Usuário GetFuncionario()
         {
             Usuário u = new Usuário();
-            u.Email = e.Text;
             u.Nome = n.Text;
             u.Tipo = 1;
-            u.Telefone = tel.Text;
-            u.Data = DateTime.Parse(ano.Text);
-            return u;
+            try
+            {
+                u.Email = e.Text;
+                u.Telefone = tel.Text;
+                u.Data = DateTime.Parse(ano.Text);
+                return u;
+            }
+            catch (FormatException)
+            {
+                throw new FormatException();
+            }
         }
     }
 }

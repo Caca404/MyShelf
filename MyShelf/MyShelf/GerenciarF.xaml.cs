@@ -26,14 +26,41 @@ namespace MyShelf
         {
             InitializeComponent();
             funcionarios.ItemsSource = f.Listar();
+            if(funcionarios.Items.Count == 0)
+            {
+                but_atualizar.IsEnabled = false;
+                but_Excluir.IsEnabled = false;
+            }
         }
         private void Adicionar(object sender, RoutedEventArgs e)
         {
             Window n = new AddF();
+            bool no_errors = true;
             if (n.ShowDialog().Value)
             {
-                f.Adicionar((n as AddF).GetFuncionario());
-                funcionarios.ItemsSource = f.Listar();
+                try
+                {
+                    f.Adicionar((n as AddF).GetFuncionario());
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Data errada");
+                    no_errors = false;
+                }
+                if (no_errors)
+                {
+                    funcionarios.ItemsSource = f.Listar();
+                    if (funcionarios.Items.Count == 0)
+                    {
+                        but_atualizar.IsEnabled = false;
+                        but_Excluir.IsEnabled = false;
+                    }
+                    else
+                    {
+                        but_atualizar.IsEnabled = true;
+                        but_Excluir.IsEnabled = true;
+                    }
+                }
             }
         }
 
@@ -43,16 +70,39 @@ namespace MyShelf
             {
                 f.Excluir((funcionarios.SelectedItem) as Usuário);
                 funcionarios.ItemsSource = f.Listar();
+                if (funcionarios.Items.Count == 0)
+                {
+                    but_atualizar.IsEnabled = false;
+                    but_Excluir.IsEnabled = false;
+                }
+                else
+                {
+                    but_atualizar.IsEnabled = true;
+                    but_Excluir.IsEnabled = true;
+                }
             }
         }
 
         private void Atualizar(object sender, RoutedEventArgs e)
         {
-            Window n = new AttF(funcionarios.SelectedItem as Usuário);
-            if (n.ShowDialog().Value)
+            if (funcionarios.SelectedItem != null)
             {
-                f.Atualizar((n as AttF).GetFuncionario());
-                funcionarios.ItemsSource = f.Listar();
+                Window n = new AttF(funcionarios.SelectedItem as Usuário);
+                if (n.ShowDialog().Value)
+                {
+                    f.Atualizar((n as AttF).GetFuncionario());
+                    funcionarios.ItemsSource = f.Listar();
+                    if (funcionarios.Items.Count == 0)
+                    {
+                        but_atualizar.IsEnabled = false;
+                        but_Excluir.IsEnabled = false;
+                    }
+                    else
+                    {
+                        but_atualizar.IsEnabled = true;
+                        but_Excluir.IsEnabled = true;
+                    }
+                }
             }
         }
     }
