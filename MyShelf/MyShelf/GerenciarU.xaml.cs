@@ -1,6 +1,8 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,11 +32,15 @@ namespace MyShelf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(grid.SelectedItem != null)
+            try
             {
                 Usuário x = grid.SelectedItem as Usuário;
                 n.Excluir(x);
                 grid.ItemsSource = n.Listar();
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Nenhum Usuário foi selecionado");
             }
         }
     }

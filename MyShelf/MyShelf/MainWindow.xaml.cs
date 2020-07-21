@@ -43,19 +43,19 @@ namespace MyShelf
                 {
                     Window janela = new Adm();
                     Close();
-                    janela.ShowDialog();
+                    janela.Show();
                 }
                 else if (i == 1)
                 {
                     Window janela = new funcionario();
                     Close();
-                    janela.ShowDialog();
+                    janela.Show();
                 }
                 else if (i == 2)
                 {
                     Window janela = new HUsuario(u);
                     Close();
-                    janela.ShowDialog();
+                    janela.Show();
                 }
             }
         }
@@ -69,11 +69,20 @@ namespace MyShelf
             }
             if (r == false)
             {
+                
                 NFuncionario f = new NFuncionario();
-                List<Usuário> a = f.Listar();
+                List<Funcionario> a = f.Listar();
                 foreach (Usuário x in a)
                 {
-                    if (x.Email == n && s == x.Senha)
+                    string h = x.Senha;
+                    string te = "";
+                    foreach (char pl in h)
+                    {
+                        int v = pl;
+                        v -= 10;
+                        te += Convert.ToChar(v);
+                    }
+                    if (x.Email == n && s == te)
                     {
                         r = true;
                         p = x.Tipo;
@@ -88,7 +97,15 @@ namespace MyShelf
                 List<Usuário> b = e.Listar();
                 foreach (Usuário x in b)
                 {
-                    if (x.Email == n && s == x.Senha)
+                    string h = x.Senha;
+                    string te = "";
+                    foreach (char pl in h)
+                    {
+                        int v = pl;
+                        v -= 10;
+                        te += Convert.ToChar(v);
+                    }
+                    if (x.Email == n && s == te)
                     {
                         r = true;
                         p = x.Tipo;

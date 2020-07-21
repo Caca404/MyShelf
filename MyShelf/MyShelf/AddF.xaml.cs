@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,7 @@ namespace MyShelf
     /// </summary>
     public partial class AddF : Window
     {
+        private string foto = string.Empty;
         public AddF()
         {
             InitializeComponent();
@@ -32,21 +35,43 @@ namespace MyShelf
         {
             DialogResult = false;
         }
-        public Usuário GetFuncionario()
+        public Funcionario GetFuncionario()
         {
-            Usuário u = new Usuário();
-            u.Nome = n.Text;
-            u.Tipo = 1;
-            try
+            bool test = true;
+            Funcionario u = new Funcionario();
+                try
+                {
+                    u.Email = e.Text;
+                    u.Nome = n.Text;
+                    u.Tipo = 1;
+                    u.foto = foto;
+                    u.Telefone = tel.Text;
+                    u.Data = DateTime.Parse(ano.Text);
+                    return u;
+                }
+                catch (Exception k)
+                {
+                    MessageBox.Show(k.Message);
+                    return null;
+                }
+            
+        }
+
+        private void img(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog w = new OpenFileDialog();
+            w.Filter = "Arquivos Jpg|*.jpg";
+            if (w.ShowDialog().Value)
             {
-                u.Email = e.Text;
-                u.Telefone = tel.Text;
-                u.Data = DateTime.Parse(ano.Text);
-                return u;
-            }
-            catch (FormatException)
-            {
-                throw new FormatException();
+                byte[] b = File.ReadAllBytes(w.FileName);
+                foto = Convert.ToBase64String(b);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+
+                imagem.Source = bi;
             }
         }
     }

@@ -10,11 +10,12 @@
         <TextBlock HorizontalAlignment="Left" Height="106" Margin="90,136,-13,0" TextWrapping="Wrap" Text="MyShelf 📚" FontSize="60
                    
                    " VerticalAlignment="Top" Width="403"/>
-        <Menu Name="Mn" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="602">
-            <MenuItem Header="Menu" FontSize="20" Height="40" Width="120" Click="MenuItem_Click">
+        <Menu Name="Mn" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="480">
+            <MenuItem Header="Menu" FontSize="20" Height="40" Width="120">
                 <MenuItem Header="Gerenciar Funcionários" Click="GF"/>
                 <MenuItem Header="Gerenciar Usuários" Click="GU"/>
                 <MenuItem Header="Gerenciar Livros" Click="GL"/>
+                <MenuItem Header="Logoff" Click="log"/>
             </MenuItem>
         </Menu>
 

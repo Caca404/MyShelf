@@ -1,6 +1,8 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -66,9 +68,9 @@ namespace MyShelf
 
         private void Excluir(object sender, RoutedEventArgs e)
         {
-            if (funcionarios.SelectedItem != null)
+            try
             {
-                f.Excluir((funcionarios.SelectedItem) as Usuário);
+                f.Excluir((funcionarios.SelectedItem) as Funcionario);
                 funcionarios.ItemsSource = f.Listar();
                 if (funcionarios.Items.Count == 0)
                 {

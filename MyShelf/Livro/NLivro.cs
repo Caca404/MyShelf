@@ -14,11 +14,10 @@ namespace Negocio
         private List<Livro> ls;
         public List<Livro> Pesquisar(string nome)
         {
-            
             List<Livro> cs = p.Open().OrderBy(c => c.Nome).ToList();
             List<Livro> r = new List<Livro>();
             foreach (Livro c in cs)
-                if (c.Nome.StartsWith(nome)) r.Add(c);
+                if (c.Nome.ToUpper().StartsWith(nome.ToUpper())) r.Add(c);
             return r;
         }
         public List<Livro> Listar()
@@ -39,7 +38,7 @@ namespace Negocio
                 }
             p.Save(cs);
         }
-        public void Add(Livro l)
+        public void Adicionar(Livro l)
         {
             PLivro p = new PLivro();
             ls = p.Open();

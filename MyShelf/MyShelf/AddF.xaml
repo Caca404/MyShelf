@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="AddF" Height="331" Width="352.143">
+        Title="AddF" Height="432.061" Width="353.07">
     <Grid>
-        <TextBox Name="n" HorizontalAlignment="Left" Height="31" Margin="20,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="20,10,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="64"/>
-        <TextBox Name="e" HorizontalAlignment="Left" Height="31" Margin="20,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="20,84,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="64"/>
-        <TextBox Name="ano" HorizontalAlignment="Left" Height="31" Margin="20,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="20,158,0,0" TextWrapping="Wrap" Text="Nascimento" VerticalAlignment="Top" Width="64"/>
-        <TextBox Name="tel" HorizontalAlignment="Left" Height="31" Margin="194,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128"/>
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="194,158,0,0" TextWrapping="Wrap" Text="Telefone" VerticalAlignment="Top" Width="86"/>
-        <Button Content="Adicionar" HorizontalAlignment="Left" Height="31" Margin="20,250,0,0" VerticalAlignment="Top" Width="127" Click="ad"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Height="31" Margin="194,250,0,0" VerticalAlignment="Top" Width="128" Click="canc"/>
+        <TextBox Name="n" HorizontalAlignment="Left" Height="31" Margin="20,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="20,106,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="e" HorizontalAlignment="Left" Height="31" Margin="20,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="20,180,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="ano" HorizontalAlignment="Left" Height="31" Margin="20,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="20,254,0,0" TextWrapping="Wrap" Text="Nascimento" VerticalAlignment="Top" Width="64"/>
+        <TextBox Name="tel" HorizontalAlignment="Left" Height="31" Margin="194,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="194,254,0,0" TextWrapping="Wrap" Text="Telefone" VerticalAlignment="Top" Width="86"/>
+        <Button Content="Adicionar" HorizontalAlignment="Left" Height="31" Margin="20,346,0,0" VerticalAlignment="Top" Width="127" Click="ad"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Height="31" Margin="194,346,0,0" VerticalAlignment="Top" Width="128" Click="canc"/>
+        <Image Name="imagem"  HorizontalAlignment="Left" Height="100" Margin="204,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Inserir imagem" HorizontalAlignment="Left" Height="33" Margin="20,43,0,0" VerticalAlignment="Top" Width="114" Click="img"/>
     </Grid>
 </Window>

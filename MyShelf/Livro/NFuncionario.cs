@@ -10,29 +10,29 @@ namespace Negocio
 {
     public class NFuncionario
     {
-        private List<Usuário> ls;
+        private List<Funcionario> ls;
         PFuncionario p = new PFuncionario();
-        public List<Usuário> Listar()
+        public List<Funcionario> Listar()
         {
             ls = p.Open().OrderBy(c => c.Nome).ToList();
             return ls;
         }
-        public void Adicionar(Usuário f)
+        public void Adicionar(Funcionario f)
         {
             PFuncionario p = new PFuncionario();
             ls = p.Open();
             int m = 0;
-            foreach (Usuário x in ls) if (x.Id > m) m = x.Id;
+            foreach (Funcionario x in ls) if (x.Id > m) m = x.Id;
             f.Id = m + 1;
             f.Matricula = f.Id.ToString() + "2019" + f.Tipo.ToString();
             f.Senha = f.Matricula;
             ls.Add(f);
             p.Save(ls);
         }
-        public void Excluir(Usuário c)
+        public void Excluir(Funcionario c)
         {
             PFuncionario p = new PFuncionario();
-            List<Usuário> cs = p.Open();
+            List<Funcionario> cs = p.Open();
             for (int i = 0; i < cs.Count; i++)
                 if (cs[i].Matricula == c.Matricula)
                 {
@@ -41,10 +41,10 @@ namespace Negocio
                 }
             p.Save(cs);
         }
-        public void Atualizar(Usuário f)
+        public void Atualizar(Funcionario f)
         {
             PFuncionario p = new PFuncionario();
-            List<Usuário> cs = p.Open();
+            List<Funcionario> cs = p.Open();
             for (int i = 0; i < cs.Count; i++)
                 if (cs[i].Matricula == f.Matricula)
                 {

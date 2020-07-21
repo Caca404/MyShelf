@@ -23,10 +23,17 @@ namespace Modelo
         public string Autor { get; set; }
         public string Genero { get; set; }
         public string ISBN { get; set; }
-        public int Ano { get; set; }
+        public int Ano { get;
+            set
+            {
+                int a = DateTime.Now.Year;
+                if (value > a) throw new Exception("Ano do futuro");
+                else Ano = value;
+            }
+        }
         public override string ToString()
         {
-            return $"{Id} {Nome} {Autor} {Genero} {Ano} {ISBN}";
+            return $"Nome: {Nome} -- Autor: {Autor} -- Genero: {Genero} -- Ano: {Ano}";
         }
     }
 }

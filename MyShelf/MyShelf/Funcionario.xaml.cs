@@ -35,5 +35,12 @@ namespace MyShelf
             GerenciarL l = new GerenciarL();
             l.ShowDialog();
         }
+
+        private void log(object sender, RoutedEventArgs e)
+        {
+            MainWindow a = new MainWindow();
+            a.ShowDialog();
+            Close();
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="GerenciarF" Height="299.143" Width="468.947">
+        Title="GerenciarF" Height="383.775" Width="530.116">
     <Grid>
         <GroupBox Header="Gerenciar Funcionários" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="439" Margin="10,8,0,0">
             <Grid Margin="0,0,0,-12">

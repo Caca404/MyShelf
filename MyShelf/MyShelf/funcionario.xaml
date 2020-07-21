@@ -13,6 +13,7 @@
             <MenuItem Header="Menu" FontSize="20" Height="40" Width="120">
                 <MenuItem Header="Gerenciar Usuários" Click="GU"/>
                 <MenuItem Header="Gerenciar Livros" Click="GL"/>
+                <MenuItem Header="Logoff" Click="log"/>
             </MenuItem>
         </Menu>
     </Grid>

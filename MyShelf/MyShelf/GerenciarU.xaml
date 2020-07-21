@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShelf"
         mc:Ignorable="d"
-        Title="GerenciarU" Height="354.865" Width="482.098">
-    <Grid Margin="0,0,47,21">
+        Title="GerenciarU" Height="293.946" Width="433.107">
+    <Grid Margin="0,0,2,3">
 
-        <GroupBox Header="Gerenciar Usuários" HorizontalAlignment="Left" Height="294" Margin="10,10,0,0" VerticalAlignment="Top" Width="415">
-            <Grid Margin="0,0,-12,-22">
-                <ListBox Name="grid" HorizontalAlignment="Left" Height="166" Margin="22,32,0,0" VerticalAlignment="Top" Width="360"/>
-                <Button Content="Banir" HorizontalAlignment="Left" Height="31" Margin="264,219,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click"/>
+        <GroupBox Header="Gerenciar Usuários" HorizontalAlignment="Left" Height="335" Margin="10,10,0,0" VerticalAlignment="Top" Width="452">
+            <Grid Margin="-20,-32,-29,-22">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ListBox Name="grid" HorizontalAlignment="Left" Height="166" Margin="37,47,0,0" VerticalAlignment="Top" Width="360"/>
+                <Button Content="Banir" HorizontalAlignment="Left" Height="31" Margin="168,218,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click"/>
 
             </Grid>
         </GroupBox>

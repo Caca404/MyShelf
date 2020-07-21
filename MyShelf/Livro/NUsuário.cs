@@ -23,7 +23,6 @@ namespace Negocio
             int m = 0;
             foreach (Usuário x in ls) if (x.Id > m) m = x.Id;
             f.Id = m + 1;
-            f.Matricula = f.Id.ToString() + "2019" + f.Tipo.ToString();
             ls.Add(f);
             p.Save(ls);
         }
@@ -31,7 +30,7 @@ namespace Negocio
         {
             List<Usuário> cs = p.Open();
             for (int i = 0; i < cs.Count; i++)
-                if (cs[i].Matricula == c.Matricula)
+                if (cs[i].Id == c.Id)
                 {
                     cs.RemoveAt(i);
                     break;
@@ -42,7 +41,7 @@ namespace Negocio
         {
             List<Usuário> cs = p.Open();
             for (int i = 0; i < cs.Count; i++)
-                if (cs[i].Matricula == f.Matricula)
+                if (cs[i].Id == f.Id)
                 {
                     cs.RemoveAt(i);
                     break;

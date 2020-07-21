@@ -42,6 +42,7 @@ namespace MyShelf
             l.Ano = int.Parse(ano.Text);
             l.Genero = g.Text;
             return l;
+
         }
     }
 }
